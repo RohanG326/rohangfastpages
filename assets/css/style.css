@@ -425,6 +425,8 @@ pre code { font-size: 15px !important; }
 
 .youtube-iframe-wrapper iframe, .youtube-iframe-wrapper object, .youtube-iframe-wrapper embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+/*-----------------------------------*/
+/*--- IMPORT STYLES FOR FASTPAGES ---*/
 html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.87) !important; background-color: #121212 !important; }
 
 a { color: #4bbaff !important; }

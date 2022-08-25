@@ -104,12 +104,20 @@
   
 
   
-
+      ,"page2": {
+          "title": "Notes",
+          "content": "Notes . Week 1 . Week 0 .",
+          "url": "https://rohang326.github.io/rohangfastpages/notes/",
+          "relUrl": "/notes/",
+          "date": ""
+      }
+      
   
 
   
 
   
+
   
 
   
@@ -125,7 +133,10 @@
   
 
   
-      ,"page10": {
+  
+
+  
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://rohang326.github.io/rohangfastpages/robots.txt",

@@ -4,9 +4,7 @@ title: Notes
 permalink: /notes/
 ---
 
-# Notes
-
-## Week 1  
+# Week 1  
 ## Primitives
 - Primitives are basic data values such as integers, doubles, and booleans
 - building block of primitives are characters
@@ -23,7 +21,7 @@ permalink: /notes/
 ## Code.org
 <img src="lesson5java.png" width=400 height=300 />
 
-## Week 0  
+# Week 0  
 - use wsl to load all projects
 - code . to open vscode
 - cd ~ to cd into home directory

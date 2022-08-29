@@ -4,8 +4,6 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
-
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+Hello my name is Rohan Gaikwad!  
+I love learning, hanging out with my friends, and eating good food!
+I am on Track and Field, Science Olympiad, Quizbowl, and Academic League at Del Norte High School!

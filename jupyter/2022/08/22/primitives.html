@@ -370,16 +370,20 @@ Average: NaN
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">CompoundInterest</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">Scanner</span> <span class="n">Year</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"How many years"</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"How many years?"</span><span class="p">);</span>
       <span class="kt">int</span> <span class="n">years</span> <span class="o">=</span> <span class="n">Year</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+      <span class="c1">// int because years are an int for compound interest</span>
       <span class="n">Scanner</span> <span class="n">Rate</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"What is your interest rate in %?"</span><span class="p">);</span>
       <span class="kt">double</span> <span class="n">rate</span> <span class="o">=</span> <span class="n">Rate</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+      <span class="c1">// double because interest rate is usually expressed in a decimal value such as 3.2% or 2.4%</span>
       <span class="n">Scanner</span> <span class="n">Start</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"What is your starting amount?"</span><span class="p">);</span>
-      <span class="kt">int</span> <span class="n">start</span> <span class="o">=</span> <span class="n">Start</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+      <span class="kt">double</span> <span class="n">start</span> <span class="o">=</span> <span class="n">Start</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+      <span class="c1">// people do not have whole numbers in their bank account</span>
       <span class="kt">double</span> <span class="n">finalAmount</span> <span class="o">=</span> <span class="n">start</span><span class="o">*</span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">rate</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="n">years</span><span class="p">);</span>
       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"After "</span><span class="o">+</span><span class="n">years</span><span class="o">+</span><span class="s">" years, you will have $"</span><span class="o">+</span><span class="n">finalAmount</span><span class="p">);</span>
+      <span class="c1">// does mathematical operation on the double to result in a double</span>
     <span class="p">}</span>
   <span class="p">}</span>
   <span class="n">CompoundInterest</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
@@ -398,7 +402,7 @@ Average: NaN
 <pre>How many years
 What is your interest rate in %?
 What is your starting amount?
-After 2 years, you will have $12.100000000000001
+After 10 years, you will have $12.815947568307402
 </pre>
 </div>
 </div>

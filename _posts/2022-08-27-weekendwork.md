@@ -6,6 +6,8 @@ categories: [markdown]
 title: 8/27 - 8/28 Weekend Work
 ---
 
+![](https://i.pinimg.com/736x/5f/0c/b8/5f0cb81eb2a411461058f66ee73fe653.jpg)
+
 # Priority List for 8/27
 
 | Class | Assignments | Due Date | Description | Links | Status |

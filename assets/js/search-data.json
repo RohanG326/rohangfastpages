@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Title",
+            "title": "Rohan G Jeopardy Trivia Class",
             "content": "import java.util.Dictionary; import java.util.Hashtable; public class Jeopardy { public static void main(String[] args) { Dictionary Jeopardy = new Hashtable(); // put() method Jeopardy.put(&quot;What is the capital of Chile?&quot;, &quot;Santiago&quot;); Jeopardy.put(&quot;Who is Rohan Gaikwad&#39;s Favorite Artist&quot;, &quot;Taylor Swift&quot;); //print out Hashtable out System.out.println(Jeopardy); //Is there a record with the &quot;Johnny Walker&quot; key? System.out.println(((Hashtable) Jeopardy).containsKey(&quot;Who is Rohan Gaikwad&#39;s Favorite Artist&quot;)); //all keys of the Hashtable System.out.println(((Hashtable) Jeopardy).keySet()); //values from Hashtable System.out.println(((Hashtable) Jeopardy).values()); //the quantity of records System.out.println(Jeopardy.size()); //removing one record System.out.println(Jeopardy); } } Jeopardy.main(null) . {Who is Rohan Gaikwad&#39;s Favorite Artist=Taylor Swift, What is the capital of Chile?=Santiago} true [Who is Rohan Gaikwad&#39;s Favorite Artist, What is the capital of Chile?] [Taylor Swift, Santiago] 2 {Who is Rohan Gaikwad&#39;s Favorite Artist=Taylor Swift, What is the capital of Chile?=Santiago} .",
-            "url": "https://rohang326.github.io/rohangfastpages/2022/09/05/jeopardy.html",
-            "relUrl": "/2022/09/05/jeopardy.html",
+            "url": "https://rohang326.github.io/rohangfastpages/jupyter/2022/09/05/jeopardy.html",
+            "relUrl": "/jupyter/2022/09/05/jeopardy.html",
             "date": " • Sep 5, 2022"
         }
         

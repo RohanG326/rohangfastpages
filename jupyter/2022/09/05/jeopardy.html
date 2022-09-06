@@ -147,8 +147,12 @@ window.onload = wrap_img;
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Jeopardy</span> <span class="p">{</span>
 
-       <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
 
+       <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
            <span class="n">Dictionary</span> <span class="n">Jeopardy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Hashtable</span><span class="p">();</span>
 
            <span class="c1">// put() method</span>
@@ -169,6 +173,17 @@ window.onload = wrap_img;
            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Jeopardy</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
            <span class="c1">//removing one record</span>
            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Jeopardy</span><span class="p">);</span>
+           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
+           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">total</span><span class="p">);</span>
+           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">count</span><span class="p">);</span>
+           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">correct</span><span class="p">);</span>
+           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">score</span> <span class="o">+</span> <span class="mi">10</span><span class="p">);</span>
+
+        <span class="c1">//    private void CheckAnswer() {</span>
+        <span class="c1">//     if this.value() = this.guess() {</span>
+        <span class="c1">//         int score = score + 1;</span>
+        <span class="c1">//     }</span>
+        <span class="c1">//    }</span>
        <span class="p">}</span>
    <span class="p">}</span>
    <span class="n">Jeopardy</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
@@ -190,6 +205,11 @@ true
 [Taylor Swift, Santiago]
 2
 {Who is Rohan Gaikwad's Favorite Artist=Taylor Swift, What is the capital of Chile?=Santiago}
+0
+0
+0
+0
+10
 </pre>
 </div>
 </div>

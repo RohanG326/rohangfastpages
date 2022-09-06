@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Rohan G Using Java Objects | Rohan G APCSA</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Rohan G Using Java Objects" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using Java Object" />
+<meta property="og:description" content="Using Java Object" />
+<link rel="canonical" href="https://rohang326.github.io/rohangfastpages/jupyter/2022/08/30/using-java-objects.html" />
+<meta property="og:url" content="https://rohang326.github.io/rohangfastpages/jupyter/2022/08/30/using-java-objects.html" />
+<meta property="og:site_name" content="Rohan G APCSA" />
+<meta property="og:image" content="https://rohang326.github.io/rohangfastpages/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-30T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://rohang326.github.io/rohangfastpages/images/chart-preview.png" />
+<meta property="twitter:title" content="Rohan G Using Java Objects" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-30T00:00:00-05:00","datePublished":"2022-08-30T00:00:00-05:00","description":"Using Java Object","headline":"Rohan G Using Java Objects","image":"https://rohang326.github.io/rohangfastpages/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohang326.github.io/rohangfastpages/jupyter/2022/08/30/using-java-objects.html"},"url":"https://rohang326.github.io/rohangfastpages/jupyter/2022/08/30/using-java-objects.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/rohangfastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohang326.github.io/rohangfastpages/feed.xml" title="Rohan G APCSA" /><link rel="shortcut icon" type="image/x-icon" href="/rohangfastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/rohangfastpages/">Rohan G APCSA</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/rohangfastpages/search/">Search</a><a class="page-link" href="/rohangfastpages/about/">About Me</a><a class="page-link" href="/rohangfastpages/notes/">Notes</a><a class="page-link" href="/rohangfastpages/pbl/">PBL</a><a class="page-link" href="/rohangfastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Rohan G Using Java Objects</h1><p class="page-description">Using Java Object</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-30T00:00:00-05:00" itemprop="datePublished">
+        Aug 30, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      10 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/rohangfastpages/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/RohanG326/rohangfastpages/tree/master/_notebooks/2022-08-30-using-java-objects.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/rohangfastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/RohanG326/rohangfastpages/master?filepath=_notebooks%2F2022-08-30-using-java-objects.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/RohanG326/rohangfastpages/blob/master/_notebooks/2022-08-30-using-java-objects.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FRohanG326%2Frohangfastpages%2Fblob%2Fmaster%2F_notebooks%2F2022-08-30-using-java-objects.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#College-Board-and-CTE-competences.">College Board and CTE competences. </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-08-30-using-java-objects.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// imports allow you to use code already written by others.  It is good to explore and learn libraries.  The names around the dots often give you a hint to the originator of the code.</span>
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span> <span class="c1">//library for user input</span>
+<span class="kn">import</span> <span class="nn">java.lang.Math</span><span class="p">;</span> <span class="c1">//library for random numbers</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Menu</span> <span class="p">{</span>
+    <span class="c1">// Instance Variables</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">DEFAULT</span> <span class="o">=</span> <span class="s">"\u001B[0m"</span><span class="p">;</span>  <span class="c1">// Default Terminal Color</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span><span class="o">[][]</span> <span class="n">COLORS</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">// 2D Array of ANSI Terminal Colors</span>
+        <span class="p">{</span><span class="s">"Default"</span><span class="p">,</span><span class="n">DEFAULT</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"Red"</span><span class="p">,</span> <span class="s">"\u001B[31m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"Green"</span><span class="p">,</span> <span class="s">"\u001B[32m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"Yellow"</span><span class="p">,</span> <span class="s">"\u001B[33m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"Blue"</span><span class="p">,</span> <span class="s">"\u001B[34m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"Purple"</span><span class="p">,</span> <span class="s">"\u001B[35m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"Cyan"</span><span class="p">,</span> <span class="s">"\u001B[36m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"White"</span><span class="p">,</span> <span class="s">"\u001B[37m"</span><span class="p">},</span> 
+    <span class="p">};</span>
+    <span class="c1">// 2D column location for data</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">NAME</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">ANSI</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// ANSI is the "standard" for terminal codes</span>
+
+    <span class="c1">// Constructor on this Object takes control of menu events and actions</span>
+    <span class="kd">public</span> <span class="nf">Menu</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  <span class="c1">// using Java Scanner Object</span>
+        
+        <span class="k">this</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>  <span class="c1">// print Menu</span>
+        <span class="kt">boolean</span> <span class="n">quit</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">quit</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">try</span> <span class="p">{</span>  <span class="c1">// scan for Input</span>
+                <span class="kt">int</span> <span class="n">choice</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>  <span class="c1">// using method from Java Scanner Object</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">""</span> <span class="o">+</span> <span class="n">choice</span> <span class="o">+</span> <span class="s">": "</span><span class="p">);</span>
+                <span class="n">quit</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">action</span><span class="p">(</span><span class="n">choice</span><span class="p">);</span>  <span class="c1">// take action</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span> <span class="c1">// error: clear buffer</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span> <span class="o">+</span> <span class="s">": Not a number, try again."</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">sc</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Print the menu options to Terminal</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//System.out.println commands below is used to present a Menu to the user. </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-------------------------\n"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Choose from these choices"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-------------------------\n"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"1 - Say Hello"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"2 - Output colors"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"3 - Loading in color"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"4 - Say Monkey"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"0 - Quit"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-------------------------\n"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Private method to perform action and return true if action is to quit/exit</span>
+    <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">action</span><span class="p">(</span><span class="kt">int</span> <span class="n">selection</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">boolean</span> <span class="n">quit</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+        <span class="k">switch</span> <span class="p">(</span><span class="n">selection</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// Switch or Switch/Case is Control Flow statement and is used to evaluate the user selection</span>
+            <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>  
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Goodbye, World!"</span><span class="p">);</span>
+                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">COLORS</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  <span class="c1">// loop through COLORS array</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">COLORS</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">ANSI</span><span class="o">]</span> <span class="o">+</span> <span class="n">COLORS</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">NAME</span><span class="o">]</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Loading..."</span><span class="p">);</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// fixed length loading bar</span>
+                    <span class="kt">int</span> <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="n">COLORS</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>  <span class="c1">// random logic</span>
+                    <span class="k">try</span> <span class="p">{</span>
+                        <span class="n">Thread</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>  <span class="c1">// delay for loading</span>
+                    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">COLORS</span><span class="o">[</span><span class="n">random</span><span class="o">][</span><span class="n">ANSI</span><span class="o">]</span> <span class="o">+</span> <span class="s">"#"</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Hello, Monkey!"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>        
+            <span class="k">default</span><span class="p">:</span>
+                <span class="c1">//Prints error message from console</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Unexpected choice, try again."</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">DEFAULT</span><span class="p">);</span>  <span class="c1">// make sure to reset color and provide new line</span>
+        <span class="k">return</span> <span class="n">quit</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Static driver/tester method</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>  <span class="p">{</span>  
+        <span class="k">new</span> <span class="n">Menu</span><span class="p">();</span> <span class="c1">// starting Menu object</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+<span class="n">Menu</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-------------------------
+
+Choose from these choices
+-------------------------
+
+1 - Say Hello
+2 - Output colors
+3 - Loading in color
+4 - Say Monkey
+0 - Quit
+-------------------------
+
+3: Loading...<span class="ansi-yellow-fg">#</span><span class="ansi-red-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-red-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-yellow-fg">#</span><span class="ansi-yellow-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-red-fg">#</span><span class="ansi-red-fg">#</span>#<span class="ansi-magenta-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-magenta-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-magenta-fg">#</span><span class="ansi-yellow-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-red-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-red-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-blue-fg">#</span>#<span class="ansi-yellow-fg">#</span><span class="ansi-magenta-fg">#</span>#<span class="ansi-magenta-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-white-fg">#</span>#<span class="ansi-cyan-fg">#</span>#<span class="ansi-magenta-fg">#</span>#<span class="ansi-red-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-yellow-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-red-fg">#</span>##<span class="ansi-cyan-fg">#</span>#<span class="ansi-blue-fg">#</span>#<span class="ansi-green-fg">#</span><span class="ansi-red-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-magenta-fg">#</span><span class="ansi-yellow-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-magenta-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-magenta-fg">#</span><span class="ansi-cyan-fg">#</span>#<span class="ansi-cyan-fg">#</span>#<span class="ansi-red-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-yellow-fg">#</span><span class="ansi-red-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-yellow-fg">#</span><span class="ansi-red-fg">#</span>#<span class="ansi-red-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-magenta-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-yellow-fg">#</span><span class="ansi-yellow-fg">#</span><span class="ansi-yellow-fg">#</span><span class="ansi-green-fg">#</span>
+0: Goodbye, World!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.awt.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.awt.event.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.swing.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Timer</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.TimerTask</span><span class="p">;</span>
+<span class="c1">// Graphical-User-Interface for Desktop in Java using Java Swing. </span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MenuJFrame</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="kd">implements</span> <span class="n">ActionListener</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">JFrame</span> <span class="n">frame</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">JMenuBar</span> <span class="n">menubar</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">JMenu</span> <span class="n">menu</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">JLabel</span> <span class="n">message</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JLabel</span><span class="p">(</span><span class="s">"Click on Menu to select an action."</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span><span class="o">[]</span> <span class="n">MENUS</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">// 1D Array of Menu Choices</span>
+        <span class="s">"Hello"</span><span class="p">,</span> <span class="s">"Colors"</span><span class="p">,</span> <span class="s">"Loading bar"</span><span class="p">,</span>  
+    <span class="p">};</span>
+    <span class="c1">// Statics to assist with timer and messaging, single copy (no instance)</span>
+    <span class="kd">private</span>	<span class="kd">static</span> <span class="kt">int</span> <span class="n">delay</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="kd">private</span>	<span class="kd">static</span> <span class="kt">int</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="n">hashes</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+
+    <span class="c1">// Constructor enables the Frame instance, the object "this.frame"</span>
+    <span class="kd">public</span> <span class="nf">MenuJFrame</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span>
+	    <span class="c1">// Initializing Key Objects</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JFrame</span><span class="p">(</span><span class="n">title</span><span class="p">);</span>
+	    <span class="n">menubar</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JMenuBar</span><span class="p">();</span>
+	    <span class="n">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JMenu</span><span class="p">(</span><span class="s">"Menu"</span><span class="p">);</span>
+
+        <span class="c1">// Initializing Menu objects and adding actions</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">mx</span> <span class="p">:</span> <span class="n">MENUS</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">JMenuItem</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JMenuItem</span><span class="p">(</span><span class="n">mx</span><span class="p">);</span>
+            <span class="n">m</span><span class="p">.</span><span class="na">addActionListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+            <span class="n">menu</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">m</span><span class="p">);</span> 
+        <span class="p">}</span>
+
+        <span class="c1">// Adding / Connecting Objects</span>
+        <span class="n">menubar</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">menu</span><span class="p">);</span>
+        <span class="n">frame</span><span class="p">.</span><span class="na">setJMenuBar</span><span class="p">(</span><span class="n">menubar</span><span class="p">);</span>
+        <span class="n">frame</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+
+        <span class="c1">// Sets JFrame close operation to Class variable JFrame.EXIT_ON_CLOSE</span>
+        <span class="n">frame</span><span class="p">.</span><span class="na">setDefaultCloseOperation</span><span class="p">(</span><span class="n">JFrame</span><span class="p">.</span><span class="na">EXIT_ON_CLOSE</span><span class="p">);</span>
+        
+        <span class="c1">// set the size of window based on objects</span>
+        <span class="n">frame</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
+
+        <span class="c1">// makes the frame object visible according to properties previously set</span>
+        <span class="n">frame</span><span class="p">.</span><span class="na">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>  <span class="c1">// flow of control shifts to frame object</span>
+    <span class="p">}</span>
+
+    <span class="c1">// event from user selecting a menu option</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// local variable to ActinEvent</span>
+        <span class="n">String</span> <span class="n">selection</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="na">getActionCommand</span><span class="p">();</span>  <span class="c1">// menu selection</span>
+        <span class="n">String</span> <span class="n">msg</span><span class="p">;</span> <span class="c1">// local variable to create response from action</span>
+        <span class="kd">final</span> <span class="n">String</span><span class="o">[]</span> <span class="n">COLORS</span> <span class="o">=</span> <span class="p">{</span><span class="s">"Red"</span><span class="p">,</span> <span class="s">"Green"</span><span class="p">,</span> <span class="s">"Blue"</span><span class="p">};</span>  <span class="c1">// add more colors here</span>
+ 	    <span class="kd">final</span> <span class="n">String</span> <span class="n">start_msg</span> <span class="o">=</span> <span class="s">"&lt;html&gt;"</span><span class="p">;</span>  <span class="c1">// html building</span>
+       	<span class="kd">final</span> <span class="n">String</span> <span class="n">end_msg</span> <span class="o">=</span> <span class="s">"&lt;/html&gt;"</span><span class="p">;</span>
+       	<span class="kd">final</span> <span class="n">String</span> <span class="n">hash</span> <span class="o">=</span> <span class="s">"#"</span><span class="p">;</span>
+
+        <span class="c1">// run code based on the menuItem that was selected</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">selection</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">MENUS</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>  <span class="c1">// Hello Action</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s">"Hello, World"</span><span class="p">;</span>
+            <span class="n">message</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">selection</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">MENUS</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span> <span class="c1">// Color Action</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">start_msg</span> <span class="o">+</span> <span class="s">"&lt;p&gt;"</span> <span class="o">+</span> <span class="n">selection</span> <span class="o">+</span> <span class="s">"&lt;/p&gt;"</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">color</span> <span class="p">:</span> <span class="n">COLORS</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">msg</span> <span class="o">+=</span> <span class="s">"&lt;font color="</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span> <span class="s">"&gt;"</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span> <span class="s">" &lt;/font&gt;"</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="n">end_msg</span><span class="p">;</span>
+            <span class="n">message</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>  <span class="c1">// Loading Bar Action</span>
+	    <span class="n">String</span> <span class="n">loading</span> <span class="o">=</span> <span class="s">"&lt;p&gt;Loading&lt;/p&gt;"</span><span class="p">;</span>
+            <span class="c1">// Code to run on a Timer</span>
+            <span class="n">Timer</span> <span class="n">timer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Timer</span><span class="p">();</span>
+            <span class="n">TimerTask</span> <span class="n">task</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TimerTask</span><span class="p">()</span> <span class="p">{</span>
+                <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>  <span class="c1">// Method for TimerTask</span>
+                    <span class="c1">// Static and Local variables used to manage message building</span>
+                    <span class="kt">int</span> <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="n">COLORS</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>  <span class="c1">// random logic</span>
+                    <span class="n">MenuJFrame</span><span class="p">.</span><span class="na">hashes</span> <span class="o">+=</span>  <span class="s">"&lt;font color="</span> <span class="o">+</span> <span class="n">COLORS</span><span class="o">[</span><span class="n">random</span><span class="o">]</span> <span class="o">+</span> <span class="s">"&gt;"</span> <span class="o">+</span> <span class="n">hash</span> <span class="o">+</span> <span class="s">"&lt;/font&gt;"</span><span class="p">;</span>
+                    <span class="n">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">start_msg</span> <span class="o">+</span> <span class="n">loading</span> <span class="o">+</span> <span class="n">hashes</span> <span class="o">+</span> <span class="n">end_msg</span><span class="p">;</span>
+                    <span class="n">message</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+                    
+	  	            <span class="c1">// Shutdown timer and reset data</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">MenuJFrame</span><span class="p">.</span><span class="na">step</span><span class="o">++</span> <span class="o">&gt;</span> <span class="n">MenuJFrame</span><span class="p">.</span><span class="na">delay</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="n">MenuJFrame</span><span class="p">.</span><span class="na">step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">MenuJFrame</span><span class="p">.</span><span class="na">hashes</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+                        <span class="n">timer</span><span class="p">.</span><span class="na">cancel</span><span class="p">();</span>
+                    <span class="p">}</span>
+                <span class="p">};</span>
+            <span class="p">};</span>
+            <span class="c1">// Schedule task and interval</span>
+            <span class="n">timer</span><span class="p">.</span><span class="na">schedule</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+            <span class="n">message</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">start_msg</span> <span class="o">+</span> <span class="n">loading</span> <span class="o">+</span> <span class="n">hash</span> <span class="o">+</span> <span class="n">end_msg</span><span class="p">);</span>  <span class="c1">// prime/initial display</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Driver turn over control the GUI</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Activates an instance of MenuJFrame class, which makes a JFrame object</span>
+        <span class="k">new</span> <span class="n">MenuJFrame</span><span class="p">(</span><span class="s">"Menu"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">MenuJFrame</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">java.lang.NoClassDefFoundError: Could not initialize class java.awt.GraphicsEnvironment$LocalGE</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment(GraphicsEnvironment.java:129)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.Window.initGC(Window.java:487)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.Window.init(Window.java:507)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.Window.&lt;init&gt;(Window.java:549)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.Frame.&lt;init&gt;(Frame.java:423)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/java.awt.Frame.&lt;init&gt;(Frame.java:388)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.desktop/javax.swing.JFrame.&lt;init&gt;(JFrame.java:180)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at MenuJFrame.&lt;init&gt;(#17:1)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at MenuJFrame.main(#17:1)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at .(#19:1)</span></pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+<h3 id="College-Board-and-CTE-competences.">
+<a class="anchor" href="#College-Board-and-CTE-competences." aria-hidden="true"><span class="octicon octicon-link"></span></a>College Board and CTE competences.<a class="anchor-link" href="#College-Board-and-CTE-competences."> </a>
+</h3>
+<p>Documentation / Analysis. Describe with Markdown Cell(s) and triple backtick code fragments that answers to the following from your work...
+Explain where a Class is defined
+Explain where an instances of a Class is defined
+Explain where an object is Calling a Method
+Explain where an object is Mutating data
+Describe Console, GUI differences, or Code.org differences.
+Exploration work Build a new Console or GUI lab for your own solution of interest, this is great opportunity to visualize data from Math, Physics, or other class using Math library. Look to make these changes in your work
+Make constructors of different signatures.
+Use Wrapper Classes of Integer and Double for defining object instance or static data in the Class
+Use the Math Class in performing calculations
+Code.org learning Follow the Neighborhood lessons and work through the OOP Unit.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span> <span class="c1">//library for user input</span>
+<span class="kn">import</span> <span class="nn">java.lang.Math</span><span class="p">;</span> <span class="c1">//library for random numbers</span>
+<span class="kn">import</span> <span class="nn">java.util.Dictionary</span><span class="p">;</span> <span class="c1">//has hashtable for key value pairs</span>
+<span class="kn">import</span> <span class="nn">java.util.Hashtable</span><span class="p">;</span> 
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Menu</span> <span class="p">{</span>
+    <span class="c1">// Instance Variables</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">DEFAULT</span> <span class="o">=</span> <span class="s">"\u001B[0m"</span><span class="p">;</span>  <span class="c1">// Default Terminal Color</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span><span class="o">[][]</span> <span class="n">COLORS</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">// 2D Array of ANSI Terminal Colors</span>
+        <span class="p">{</span><span class="s">"Default"</span><span class="p">,</span><span class="n">DEFAULT</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"Red"</span><span class="p">,</span> <span class="s">"\u001B[31m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"Green"</span><span class="p">,</span> <span class="s">"\u001B[32m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"Yellow"</span><span class="p">,</span> <span class="s">"\u001B[33m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"Blue"</span><span class="p">,</span> <span class="s">"\u001B[34m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"Purple"</span><span class="p">,</span> <span class="s">"\u001B[35m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"Cyan"</span><span class="p">,</span> <span class="s">"\u001B[36m"</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s">"White"</span><span class="p">,</span> <span class="s">"\u001B[37m"</span><span class="p">},</span> 
+    <span class="p">};</span>
+    <span class="c1">// 2D column location for data</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">NAME</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">ANSI</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// ANSI is the "standard" for terminal codes</span>
+
+    <span class="c1">// Constructor on this Object takes control of menu events and actions</span>
+    <span class="kd">public</span> <span class="nf">Menu</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  <span class="c1">// using Java Scanner Object</span>
+        
+        <span class="k">this</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>  <span class="c1">// print Menu</span>
+        <span class="kt">boolean</span> <span class="n">quit</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">quit</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">try</span> <span class="p">{</span>  <span class="c1">// scan for Input</span>
+                <span class="kt">int</span> <span class="n">choice</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>  <span class="c1">// using method from Java Scanner Object</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">""</span> <span class="o">+</span> <span class="n">choice</span> <span class="o">+</span> <span class="s">": "</span><span class="p">);</span>
+                <span class="n">quit</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">action</span><span class="p">(</span><span class="n">choice</span><span class="p">);</span>  <span class="c1">// take action</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span> <span class="c1">// error: clear buffer</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span> <span class="o">+</span> <span class="s">": Not a number, try again."</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">sc</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+    <span class="n">Scanner</span> <span class="n">inputStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+    <span class="n">String</span> <span class="n">userInputStr</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">numofNum</span><span class="p">,</span> <span class="n">userNum</span><span class="p">,</span> <span class="n">fact</span><span class="p">,</span> <span class="n">tempType</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">years</span><span class="p">,</span> <span class="n">quot</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">choice</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">start</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">finalAmount</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">bin_num</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">100</span><span class="o">]</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">endReply</span><span class="p">;</span> 
+          
+    <span class="c1">// gcd</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// lcm</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">lcm</span><span class="p">(</span><span class="kt">int</span> <span class="n">n1</span><span class="p">,</span><span class="kt">int</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+        
+        <span class="k">return</span> <span class="n">n1</span><span class="o">*</span><span class="n">n2</span><span class="o">/</span><span class="p">(</span><span class="n">gcd</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="c1">//fibonacci</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+    <span class="p">{</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+  
+        
+        <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="p">}</span>
+
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">CompoundInterest</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">Scanner</span> <span class="n">Year</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"How many years?"</span><span class="p">);</span>
+          <span class="kt">int</span> <span class="n">years</span> <span class="o">=</span> <span class="n">Year</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+          <span class="c1">// int because years are an int for compound interest</span>
+          <span class="n">Scanner</span> <span class="n">Rate</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"What is your interest rate in %?"</span><span class="p">);</span>
+          <span class="kt">double</span> <span class="n">rate</span> <span class="o">=</span> <span class="n">Rate</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+          <span class="c1">// double because interest rate is usually expressed in a decimal value such as 3.2% or 2.4%</span>
+          <span class="n">Scanner</span> <span class="n">Start</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"What is your starting amount?"</span><span class="p">);</span>
+          <span class="kt">double</span> <span class="n">start</span> <span class="o">=</span> <span class="n">Start</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+          <span class="c1">// people do not have whole numbers in their bank account</span>
+          <span class="kt">double</span> <span class="n">finalAmount</span> <span class="o">=</span> <span class="n">start</span><span class="o">*</span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">rate</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="n">years</span><span class="p">);</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"After "</span><span class="o">+</span><span class="n">years</span><span class="o">+</span><span class="s">" years, you will have $"</span><span class="o">+</span><span class="n">finalAmount</span><span class="p">);</span>
+          <span class="c1">// does mathematical operation on the double to result in a double</span>
+        <span class="p">}</span>
+      
+
+    <span class="c1">// Print the menu options to Terminal</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//System.out.println commands below is used to present a Menu to the user. </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-------------------------\n"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Choose from these choices"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-------------------------\n"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"1 - GCD"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"2 - LCM"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"3 - Fibonacci"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"4 - Compound Interest"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"0 - Quit"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-------------------------\n"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Private method to perform action and return true if action is to quit/exit</span>
+    <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">action</span><span class="p">(</span><span class="kt">int</span> <span class="n">selection</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">boolean</span> <span class="n">quit</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+        <span class="k">switch</span> <span class="p">(</span><span class="n">selection</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// Switch or Switch/Case is Control Flow statement and is used to evaluate the user selection</span>
+            <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>  
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Goodbye, World!"</span><span class="p">);</span>
+                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+                
+            <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The two numbers are: "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">" and "</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The GCD of the two numbers is: "</span> <span class="o">+</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">));</span>
+                <span class="n">print</span><span class="p">();</span>
+                <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter the two numbers: "</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The two numbers are: "</span> <span class="o">+</span> <span class="n">n1</span> <span class="o">+</span> <span class="s">" and "</span> <span class="o">+</span> <span class="n">n2</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The LCM of the two numbers is: "</span> <span class="o">+</span> <span class="n">lcm</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">));</span>
+                <span class="n">print</span><span class="p">();</span>
+                <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter a number: "</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The number is: "</span> <span class="o">+</span> <span class="n">N</span><span class="p">);</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+                <span class="p">};</span>
+                <span class="n">print</span><span class="p">();</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">CompoundInterest</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+            <span class="n">print</span><span class="p">();</span>
+            <span class="k">break</span><span class="p">;</span>
+
+<span class="nl">            default:</span>
+                <span class="c1">//Prints error message from console</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Unexpected choice, try again."</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">DEFAULT</span><span class="p">);</span>  <span class="c1">// make sure to reset color and provide new line</span>
+        <span class="k">return</span> <span class="n">quit</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Static driver/tester method</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>  <span class="p">{</span>  
+        <span class="k">new</span> <span class="n">Menu</span><span class="p">();</span> <span class="c1">// starting Menu object</span>
+ 
+    <span class="p">}</span>
+
+<span class="p">}</span>
+<span class="n">Menu</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-------------------------
+
+Choose from these choices
+-------------------------
+
+1 - GCD
+2 - LCM
+3 - Fibonacci
+4 - Compound Interest
+0 - Quit
+-------------------------
+
+4: How many years?
+What is your interest rate in %?
+What is your starting amount?
+After 5 years, you will have $16.105100000000007
+-------------------------
+
+Choose from these choices
+-------------------------
+
+1 - GCD
+2 - LCM
+3 - Fibonacci
+4 - Compound Interest
+0 - Quit
+-------------------------
+
+
+0: Goodbye, World!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="RohanG326/rohangfastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/rohangfastpages/jupyter/2022/08/30/using-java-objects.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/rohangfastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/rohangfastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/rohangfastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/RohanG326" target="_blank" title="RohanG326"><svg class="svg-icon grey"><use xlink:href="/rohangfastpages/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

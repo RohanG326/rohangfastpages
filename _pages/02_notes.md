@@ -4,6 +4,10 @@ title: Notes
 permalink: /notes/
 ---
 
+# Week 3
+## If Statements
+
+
 # Week 2
 ## Code.org
 - learned about the basics of object oriented programming using the Painter

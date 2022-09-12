@@ -12,3 +12,15 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+settings.ini
+Gemfile.lock
+images/copied_from_nb/
+_posts/2020-02-20-test.md
+_posts/2022-08-20-java.md
+_posts/2022-08-20-python.md
+_posts/2022-08-22-bash.md
+_posts/2022-08-22-primitives.md
+_posts/2022-08-30-using-java-objects.md
+_posts/2022-08-31-TinyScienceTossup.docx.md
+_posts/2022-09-05-jeopardy.md
+_posts/2022-09-10-ifstatements.md

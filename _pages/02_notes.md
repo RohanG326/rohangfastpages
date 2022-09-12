@@ -6,7 +6,10 @@ permalink: /notes/
 
 # Week 3
 ## If Statements
-
+- an if statement is a conditional piece of code that executes a certain procedure once a condition is met
+- an if else statement is a conditional piece of code as well but if the condition is not met, then it executes a different procedure
+- an if else-if else is a conditional piece of code that executes a certain procedure but if the condition is not met, it executes a different conditional, but if that is not met either, then it executes the last else
+- De Morgan's law is an action you can do to a conditional that if you take the not(!) of a condition, it flips all the trues to false and the and(&&) operators to or(||) or vice versa
 
 # Week 2
 ## Code.org

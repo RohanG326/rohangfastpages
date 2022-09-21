@@ -496,18 +496,9 @@ No more Cats in CATOWN
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="cm">/*</span>
-<span class="cm"> * Creator: Nighthawk Coding Society</span>
-<span class="cm"> * Mini Lab Name: Hello Series,featuring Cat Jumpers</span>
-<span class="cm"> */</span>
-
-<span class="cm">/**</span>
-<span class="cm"> * Class for Cats: a 2D array of Cats</span>
-<span class="cm"> * As well as method to print the Poem</span>
-<span class="cm"> */</span>
-<span class="kd">class</span> <span class="nc">CatLoop</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">CatLoop</span> <span class="p">{</span>
     <span class="c1">//The area between class definition and the 1st method is where we keep data for object in Java</span>
-    <span class="n">String</span> <span class="o">[][]</span> <span class="n">Cats</span><span class="p">;</span>    <span class="c1">//2D Array: AP CSA Unit 8: 2D array of strings</span>
+    <span class="n">String</span> <span class="o">[][]</span> <span class="n">cats</span><span class="p">;</span>    <span class="c1">//2D Array: AP CSA Unit 8: 2D array of strings</span>
                             <span class="c1">//2D array is like a grid [x][y]</span>
                             <span class="c1">// or like a spreadsheet [row][column]</span>
 
@@ -516,69 +507,65 @@ No more Cats in CATOWN
 <span class="cm">     */</span>
     <span class="kd">public</span> <span class="nf">CatLoop</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">//Storing Data in 2D arrays</span>
-        <span class="n">Cats</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>   <span class="c1">//2D array above is just a name, "new" makes a container ("object")</span>
+        <span class="n">cats</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>   <span class="c1">//2D array above is just a name, "new" makes a container ("object")</span>
                 <span class="c1">//Cat 0</span>
                 <span class="p">{</span>
-                   <span class="s">"  /\\_/\\ "</span><span class="p">,</span>
-                   <span class="s">" ( o.o ) "</span><span class="p">,</span>
-                   <span class="s">"  &gt; ^ &lt; "</span><span class="p">,</span>
-                <span class="p">},</span>
-                <span class="c1">//Cat 1</span>
-                <span class="p">{</span>
-                        <span class="s">"  /\\_/\\  "</span><span class="p">,</span>
-                        <span class="s">" ( o o ) "</span><span class="p">,</span>
-                        <span class="s">" ==_Y_== "</span><span class="p">,</span>
-                        <span class="s">"   `-'    "</span><span class="p">,</span>
-                <span class="p">},</span>
-                <span class="c1">//Cat 2</span>
-                <span class="p">{</span>
-                        <span class="s">" |\\__/,|   (`\\"</span><span class="p">,</span>       <span class="c1">//[2][0]</span>
-                        <span class="s">" |o o  |_   ) )"</span><span class="p">,</span>
-                        <span class="s">" -(((---(((--------"</span><span class="p">,</span>
-                <span class="p">},</span>
-                <span class="c1">//Cat 3</span>
-                <span class="p">{</span>
-                        <span class="s">"|\\---/|"</span><span class="p">,</span>        <span class="c1">//[3][0]</span>
-                        <span class="s">"| o_o |  "</span><span class="p">,</span>
-                        <span class="s">" \\_^_/ "</span><span class="p">,</span>
-                <span class="p">},</span>
-                <span class="c1">//Cat 4</span>
-                <span class="p">{</span>
-                        <span class="s">"         |\\      _,,,---,,_ "</span><span class="p">,</span>          <span class="c1">//[4][0]</span>
-                        <span class="s">"  ZZZzz /,`.-'`'    -.  ;-;;,_ "</span><span class="p">,</span>          <span class="c1">//[4][1]</span>
-                        <span class="s">"        |,4-  ) )-,_. ,\\ (  `'-' "</span><span class="p">,</span>          <span class="c1">//[4][2]</span>
-                        <span class="s">"         '---''(_/--'  `-'\\_) "</span>           <span class="c1">//[4][3]</span>
-                <span class="p">},</span>
-
-        <span class="p">};</span>
+                    <span class="s">"  /\\_/\\ "</span><span class="p">,</span>
+                    <span class="s">" ( o.o ) "</span><span class="p">,</span>
+                    <span class="s">"  &gt; ^ &lt; "</span><span class="p">,</span>
+                 <span class="p">},</span>
+                 <span class="c1">//Cat 1</span>
+                 <span class="p">{</span>
+                         <span class="s">"  /\\_/\\  "</span><span class="p">,</span>
+                         <span class="s">" ( o o ) "</span><span class="p">,</span>
+                         <span class="s">" ==_Y_== "</span><span class="p">,</span>
+                         <span class="s">"   `-'    "</span><span class="p">,</span>
+                 <span class="p">},</span>
+                 <span class="c1">//Cat 2</span>
+                 <span class="p">{</span>
+                         <span class="s">" |\\__/,|   (`\\"</span><span class="p">,</span>       <span class="c1">//[2][0]</span>
+                         <span class="s">" |o o  |_   ) )"</span><span class="p">,</span>
+                         <span class="s">" -(((---(((--------"</span><span class="p">,</span>
+                 <span class="p">},</span>
+                 <span class="c1">//Cat 3</span>
+                 <span class="p">{</span>
+                         <span class="s">"        |\\---/|"</span><span class="p">,</span>        <span class="c1">//[3][0]</span>
+                         <span class="s">"        | o_o |  "</span><span class="p">,</span>
+                         <span class="s">" \\_^_/ "</span><span class="p">,</span>
+                 <span class="p">},</span>
+                 <span class="c1">//Cat 4</span>
+                 <span class="p">{</span>
+                         <span class="s">"              |\\      _,,,---,,_ "</span><span class="p">,</span>          <span class="c1">//[4][0]</span>
+                         <span class="s">"  ZZZzz /,`.-'`'    -.  ;-;;,_ "</span><span class="p">,</span>          <span class="c1">//[4][1]</span>
+                         <span class="s">"                |,4-  ) )-,_. ,\\ (  `'-' "</span><span class="p">,</span>          <span class="c1">//[4][2]</span>
+                         <span class="s">"                 '---''(_/--'  `-'\\_) "</span>           <span class="c1">//[4][3]</span>
+                 <span class="p">},</span>
+    
+          <span class="p">};</span>
     <span class="p">}</span>
-    <span class="cm">/**</span>
-<span class="cm">     * Loop and print Cats in array</span>
-<span class="cm">     * ... repeat until you reach zero  ...</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printBackwards</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">CatBackwards</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">//begin the poem</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Catown Poem in Java Loopy"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Cats in Catown backwards"</span><span class="p">);</span>
 
-        <span class="c1">// Cats (non-primitive) defined in constructor knows its length</span>
-        <span class="kt">int</span> <span class="n">CatCount</span> <span class="o">=</span> <span class="n">Cats</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">CatCount</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  <span class="c1">//loops through 2D array length backwards</span>
+        <span class="c1">// cats (non-primitive) defined in constructor knows its length</span>
+        <span class="kt">int</span> <span class="n">catCount</span> <span class="o">=</span> <span class="n">cats</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">catCount</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  <span class="c1">//loops through 2D array length backwards</span>
         <span class="p">{</span>
 
             <span class="c1">//this print statement shows current count of Cats</span>
             <span class="c1">//  concatenation (+) of the loop variable and string to form a countdown message</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">" left in Catown..."</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">" little cats jumping on the bed..."</span><span class="p">);</span>
 
-            <span class="c1">//how many separate parts are there in a Cat Cat?</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">CatCount</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//cycles through "cells" of 2d array</span>
+            <span class="c1">//how many separate parts are there in a cat cat?</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//cycles through "cells" of 2d array</span>
 
                 <span class="cm">/*cycles through columns to print</span>
-<span class="cm">                each Cat part by part, will eventually print entire column*/</span>
-                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">Cats</span><span class="o">[</span><span class="n">row</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="cm">                each cat part by part, will eventually print entire column*/</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">cats</span><span class="o">[</span><span class="n">row</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 
-                    <span class="c1">// prints specific part of the Cat from the column</span>
-                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">Cats</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+                    <span class="c1">// prints specific part of the cat from the column</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">cats</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
 
                     <span class="c1">//this is new line between separate parts</span>
                     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
@@ -587,10 +574,12 @@ No more Cats in CATOWN
                 <span class="c1">//this new line gives separation between stanza of poem</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
             <span class="p">}</span>
+
+            <span class="c1">//countdown for poem, decrementing catCount variable by 1</span>
         <span class="p">}</span>
 
         <span class="c1">//out of all the loops, prints finishing messages</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No more Cats in CATOWN"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"5 Cats in CATOWN"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"0000000000000000000000000000000000"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"             THE END              "</span><span class="p">);</span>
     <span class="p">}</span>
@@ -599,7 +588,7 @@ No more Cats in CATOWN
 <span class="cm">    * A Java Driver/Test method that is the entry point for execution</span>
 <span class="cm">    */</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>  <span class="p">{</span>
-        <span class="k">new</span> <span class="n">CatLoop</span><span class="p">().</span><span class="na">printBackwards</span><span class="p">();</span>   <span class="c1">//a new Cat list and output in one step</span>
+        <span class="k">new</span> <span class="n">CatLoop</span><span class="p">().</span><span class="na">CatBackwards</span><span class="p">();</span>   <span class="c1">//a new cat list and output in one step</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
@@ -607,6 +596,94 @@ No more Cats in CATOWN
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Cats in Catown backwards
+1 little cats jumping on the bed...
+  /\_/\  
+ ( o.o )  
+  &gt; ^ &lt;  
+
+2 little cats jumping on the bed...
+  /\_/\  
+ ( o.o )  
+  &gt; ^ &lt;  
+
+  /\_/\   
+ ( o o )  
+ ==_Y_==  
+   `-'     
+
+3 little cats jumping on the bed...
+  /\_/\  
+ ( o.o )  
+  &gt; ^ &lt;  
+
+  /\_/\   
+ ( o o )  
+ ==_Y_==  
+   `-'     
+
+ |\__/,|   (`\ 
+ |o o  |_   ) ) 
+ -(((---(((-------- 
+
+4 little cats jumping on the bed...
+  /\_/\  
+ ( o.o )  
+  &gt; ^ &lt;  
+
+  /\_/\   
+ ( o o )  
+ ==_Y_==  
+   `-'     
+
+ |\__/,|   (`\ 
+ |o o  |_   ) ) 
+ -(((---(((-------- 
+
+        |\---/| 
+        | o_o |   
+ \_^_/  
+
+5 little cats jumping on the bed...
+  /\_/\  
+ ( o.o )  
+  &gt; ^ &lt;  
+
+  /\_/\   
+ ( o o )  
+ ==_Y_==  
+   `-'     
+
+ |\__/,|   (`\ 
+ |o o  |_   ) ) 
+ -(((---(((-------- 
+
+        |\---/| 
+        | o_o |   
+ \_^_/  
+
+              |\      _,,,---,,_  
+  ZZZzz /,`.-'`'    -.  ;-;;,_  
+                |,4-  ) )-,_. ,\ (  `'-'  
+                 '---''(_/--'  `-'\_)  
+
+5 Cats in CATOWN
+0000000000000000000000000000000000
+             THE END              
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

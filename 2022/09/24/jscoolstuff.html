@@ -128,22 +128,23 @@ window.onload = wrap_img;
         }
     </script>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;div class="container" style="position: absolute; font-size: 40px;color: red; left: 600px"&gt;
-        &lt;label for="number"&gt;How many questions do you want?&lt;/label&gt;
-        &lt;br&gt;
-        &lt;input id="number" type="number"/&gt;
-        &lt;button onclick="QNA(document.getElementById('number').value)"&gt;Submit&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;br&gt;
-    &lt;br&gt;
-    &lt;br&gt;
-    &lt;br&gt;
-    &lt;br&gt;
-    &lt;br&gt;
-    &lt;p style="text-align: center; font-size: 40px;color: red;" id="answer"&gt;&lt;/p&gt;
-    &lt;p style="text-align: center; font-size: 40px;color: red;" id="score"&gt;&lt;/p&gt;
-    &lt;p style="text-align: center; font-size: 40px;color: red;" id="correct"&gt;&lt;/p&gt;
-</code></pre></div></div>
+<html>
+        <div class="container" style="position: absolute; font-size: 40px;color: red; left: 600px">
+            <label for="number">How many questions do you want?</label>
+            <br />
+            <input id="number" type="number" />
+            <button onclick="QNA(document.getElementById('number').value)">Submit</button>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <p style="text-align: center; font-size: 40px;color: red;" id="answer"></p>
+        <p style="text-align: center; font-size: 40px;color: red;" id="score"></p>
+        <p style="text-align: center; font-size: 40px;color: red;" id="correct"></p>
+</html>
 
 
 

@@ -59,6 +59,7 @@ image: images/logo.png
                 }
         }
     </script>
+<html>
         <div class="container" style="position: absolute; font-size: 40px;color: red; left: 600px">
             <label for="number">How many questions do you want?</label>
             <br>
@@ -74,3 +75,4 @@ image: images/logo.png
         <p style="text-align: center; font-size: 40px;color: red;" id="answer"></p>
         <p style="text-align: center; font-size: 40px;color: red;" id="score"></p>
         <p style="text-align: center; font-size: 40px;color: red;" id="correct"></p>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Rohan G RapidAPI | Rohan G APCSA</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Rohan G RapidAPI" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Week 6 RapidAPI implementation" />
+<meta property="og:description" content="Week 6 RapidAPI implementation" />
+<link rel="canonical" href="https://rohang326.github.io/rohangfastpages/jupyter/2022/10/01/rapidapi.html" />
+<meta property="og:url" content="https://rohang326.github.io/rohangfastpages/jupyter/2022/10/01/rapidapi.html" />
+<meta property="og:site_name" content="Rohan G APCSA" />
+<meta property="og:image" content="https://rohang326.github.io/rohangfastpages/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-01T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://rohang326.github.io/rohangfastpages/images/chart-preview.png" />
+<meta property="twitter:title" content="Rohan G RapidAPI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-01T00:00:00-05:00","datePublished":"2022-10-01T00:00:00-05:00","description":"Week 6 RapidAPI implementation","headline":"Rohan G RapidAPI","image":"https://rohang326.github.io/rohangfastpages/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohang326.github.io/rohangfastpages/jupyter/2022/10/01/rapidapi.html"},"url":"https://rohang326.github.io/rohangfastpages/jupyter/2022/10/01/rapidapi.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/rohangfastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohang326.github.io/rohangfastpages/feed.xml" title="Rohan G APCSA" /><link rel="shortcut icon" type="image/x-icon" href="/rohangfastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/rohangfastpages/">Rohan G APCSA</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/rohangfastpages/search/">Search</a><a class="page-link" href="/rohangfastpages/about/">About Me</a><a class="page-link" href="/rohangfastpages/notes/">Notes</a><a class="page-link" href="/rohangfastpages/pbl/">PBL</a><a class="page-link" href="/rohangfastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Rohan G RapidAPI</h1><p class="page-description">Week 6 RapidAPI implementation</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-01T00:00:00-05:00" itemprop="datePublished">
+        Oct 1, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/rohangfastpages/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/RohanG326/rohangfastpages/tree/master/_notebooks/2022-10-01-rapidapi.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/rohangfastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/RohanG326/rohangfastpages/master?filepath=_notebooks%2F2022-10-01-rapidapi.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/RohanG326/rohangfastpages/blob/master/_notebooks/2022-10-01-rapidapi.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FRohanG326%2Frohangfastpages%2Fblob%2Fmaster%2F_notebooks%2F2022-10-01-rapidapi.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-10-01-rapidapi.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.net.URI</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.net.http.HttpClient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.net.http.HttpRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.net.http.HttpResponse</span><span class="p">;</span>
+
+<span class="n">HttpRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">.</span><span class="na">newBuilder</span><span class="p">()</span>
+    <span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="n">URI</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">"https://free-nba.p.rapidapi.com/players?page=0&amp;per_page=25"</span><span class="p">))</span>
+    <span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">"X-RapidAPI-Key"</span><span class="p">,</span> <span class="s">"35a01f5f74msh20628303ae6dbefp168484jsn83f86e2f8568"</span><span class="p">)</span>
+    <span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">"X-RapidAPI-Host"</span><span class="p">,</span> <span class="s">"free-nba.p.rapidapi.com"</span><span class="p">)</span>
+    <span class="p">.</span><span class="na">method</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">HttpRequest</span><span class="p">.</span><span class="na">BodyPublishers</span><span class="p">.</span><span class="na">noBody</span><span class="p">())</span>
+    <span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+    <span class="n">HttpResponse</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">HttpClient</span><span class="p">.</span><span class="na">newHttpClient</span><span class="p">().</span><span class="na">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">HttpResponse</span><span class="p">.</span><span class="na">BodyHandlers</span><span class="p">.</span><span class="na">ofString</span><span class="p">());</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">body</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{"data":[{"id":14,"first_name":"Ike","height_feet":null,"height_inches":null,"last_name":"Anigbogu","position":"C","team":{"id":12,"abbreviation":"IND","city":"Indiana","conference":"East","division":"Central","full_name":"Indiana Pacers","name":"Pacers"},"weight_pounds":null},{"id":25,"first_name":"Ron","height_feet":null,"height_inches":null,"last_name":"Baker","position":"G","team":{"id":20,"abbreviation":"NYK","city":"New York","conference":"East","division":"Atlantic","full_name":"New York Knicks","name":"Knicks"},"weight_pounds":null},{"id":47,"first_name":"Jabari","height_feet":null,"height_inches":null,"last_name":"Bird","position":"G","team":{"id":2,"abbreviation":"BOS","city":"Boston","conference":"East","division":"Atlantic","full_name":"Boston Celtics","name":"Celtics"},"weight_pounds":null},{"id":67,"first_name":"MarShon","height_feet":null,"height_inches":null,"last_name":"Brooks","position":"G","team":{"id":15,"abbreviation":"MEM","city":"Memphis","conference":"West","division":"Southwest","full_name":"Memphis Grizzlies","name":"Grizzlies"},"weight_pounds":null},{"id":71,"first_name":"Lorenzo","height_feet":null,"height_inches":null,"last_name":"Brown","position":"G","team":{"id":28,"abbreviation":"TOR","city":"Toronto","conference":"East","division":"Atlantic","full_name":"Toronto Raptors","name":"Raptors"},"weight_pounds":null},{"id":90,"first_name":"Omri","height_feet":null,"height_inches":null,"last_name":"Casspi","position":"F","team":{"id":15,"abbreviation":"MEM","city":"Memphis","conference":"West","division":"Southwest","full_name":"Memphis Grizzlies","name":"Grizzlies"},"weight_pounds":null},{"id":1,"first_name":"Alex","height_feet":6,"height_inches":6,"last_name":"Abrines","position":"G","team":{"id":21,"abbreviation":"OKC","city":"Oklahoma City","conference":"West","division":"Northwest","full_name":"Oklahoma City Thunder","name":"Thunder"},"weight_pounds":200},{"id":119,"first_name":"Tyler","height_feet":null,"height_inches":null,"last_name":"Davis","position":"C","team":{"id":21,"abbreviation":"OKC","city":"Oklahoma City","conference":"West","division":"Northwest","full_name":"Oklahoma City Thunder","name":"Thunder"},"weight_pounds":null},{"id":149,"first_name":"Keenan","height_feet":null,"height_inches":null,"last_name":"Evans","position":"G","team":{"id":9,"abbreviation":"DET","city":"Detroit","conference":"East","division":"Central","full_name":"Detroit Pistons","name":"Pistons"},"weight_pounds":null},{"id":179,"first_name":"Marcin","height_feet":null,"height_inches":null,"last_name":"Gortat","position":"C","team":{"id":13,"abbreviation":"LAC","city":"LA","conference":"West","division":"Pacific","full_name":"LA Clippers","name":"Clippers"},"weight_pounds":null},{"id":1593,"first_name":"Andrew","height_feet":null,"height_inches":null,"last_name":"Bogut","position":"F","team":{"id":10,"abbreviation":"GSW","city":"Golden State","conference":"West","division":"Pacific","full_name":"Golden State Warriors","name":"Warriors"},"weight_pounds":null},{"id":241,"first_name":"Amir","height_feet":6,"height_inches":9,"last_name":"Johnson","position":"C-F","team":{"id":23,"abbreviation":"PHI","city":"Philadelphia","conference":"East","division":"Atlantic","full_name":"Philadelphia 76ers","name":"76ers"},"weight_pounds":240},{"id":392,"first_name":"Malachi","height_feet":null,"height_inches":null,"last_name":"Richardson","position":"G","team":{"id":29,"abbreviation":"UTA","city":"Utah","conference":"West","division":"Northwest","full_name":"Utah Jazz","name":"Jazz"},"weight_pounds":null},{"id":281,"first_name":"Zach","height_feet":null,"height_inches":null,"last_name":"Lofton","position":"G","team":{"id":9,"abbreviation":"DET","city":"Detroit","conference":"East","division":"Central","full_name":"Detroit Pistons","name":"Pistons"},"weight_pounds":null},{"id":263,"first_name":"Kosta","height_feet":7,"height_inches":0,"last_name":"Koufos","position":"C","team":{"id":26,"abbreviation":"SAC","city":"Sacramento","conference":"West","division":"Pacific","full_name":"Sacramento Kings","name":"Kings"},"weight_pounds":245},{"id":382,"first_name":"Billy","height_feet":null,"height_inches":null,"last_name":"Preston","position":"F","team":{"id":6,"abbreviation":"CLE","city":"Cleveland","conference":"East","division":"Central","full_name":"Cleveland Cavaliers","name":"Cavaliers"},"weight_pounds":null},{"id":384,"first_name":"Zhou","height_feet":null,"height_inches":null,"last_name":"Qi","position":"F-C","team":{"id":11,"abbreviation":"HOU","city":"Houston","conference":"West","division":"Southwest","full_name":"Houston Rockets","name":"Rockets"},"weight_pounds":null},{"id":388,"first_name":"Zach","height_feet":null,"height_inches":null,"last_name":"Randolph","position":"F","team":{"id":26,"abbreviation":"SAC","city":"Sacramento","conference":"West","division":"Pacific","full_name":"Sacramento Kings","name":"Kings"},"weight_pounds":null},{"id":430,"first_name":"DJ","height_feet":null,"height_inches":null,"last_name":"Stephens","position":"G-F","team":{"id":15,"abbreviation":"MEM","city":"Memphis","conference":"West","division":"Southwest","full_name":"Memphis Grizzlies","name":"Grizzlies"},"weight_pounds":null},{"id":437,"first_name":"Milos","height_feet":null,"height_inches":null,"last_name":"Teodosic","position":"G","team":{"id":13,"abbreviation":"LAC","city":"LA","conference":"West","division":"Pacific","full_name":"LA Clippers","name":"Clippers"},"weight_pounds":null},{"id":448,"first_name":"Gary","height_feet":null,"height_inches":null,"last_name":"Trent Jr.","position":"G","team":{"id":25,"abbreviation":"POR","city":"Portland","conference":"West","division":"Northwest","full_name":"Portland Trail Blazers","name":"Trail Blazers"},"weight_pounds":null},{"id":494,"first_name":"Michael","height_feet":null,"height_inches":null,"last_name":"Smith","position":"","team":{"id":2,"abbreviation":"BOS","city":"Boston","conference":"East","division":"Atlantic","full_name":"Boston Celtics","name":"Celtics"},"weight_pounds":null},{"id":495,"first_name":"John","height_feet":null,"height_inches":null,"last_name":"Morton","position":"","team":{"id":6,"abbreviation":"CLE","city":"Cleveland","conference":"East","division":"Central","full_name":"Cleveland Cavaliers","name":"Cavaliers"},"weight_pounds":null},{"id":496,"first_name":"Howard","height_feet":null,"height_inches":null,"last_name":"Wright","position":"","team":{"id":1,"abbreviation":"ATL","city":"Atlanta","conference":"East","division":"Southeast","full_name":"Atlanta Hawks","name":"Hawks"},"weight_pounds":null},{"id":497,"first_name":"Michael","height_feet":null,"height_inches":null,"last_name":"Ansley","position":"","team":{"id":22,"abbreviation":"ORL","city":"Orlando","conference":"East","division":"Southeast","full_name":"Orlando Magic","name":"Magic"},"weight_pounds":null}],"meta":{"total_pages":151,"current_page":1,"next_page":2,"per_page":25,"total_count":3757}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="RohanG326/rohangfastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/rohangfastpages/jupyter/2022/10/01/rapidapi.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/rohangfastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/rohangfastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/rohangfastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/RohanG326" target="_blank" title="RohanG326"><svg class="svg-icon grey"><use xlink:href="/rohangfastpages/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

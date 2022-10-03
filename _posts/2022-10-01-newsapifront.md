@@ -4,8 +4,8 @@ layout: post
 description: nba api frontend
 categories: [markdown]
 title: Rohan G nba api 
+---
 
-<html>
 <!-- HTML table fragment for page -->
 <table>
   <thead>
@@ -24,23 +24,8 @@ title: Rohan G nba api
   </tbody>
 </table>
 
-<table>
-  <thead>
-  <tr>
-    <th>Country</th>
-    <th>All-time Cases</th>
-    <th>Recorded Deaths</th>
-    <th>Active Cases</th>
-  </tr>
-  </thead>
-  <tbody id="result">
-    <!-- generated rows -->
-  </tbody>
-</table>
-
 <!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
 
-</html>
 <script>
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");

@@ -3,11 +3,9 @@ toc: true
 layout: post
 description: nba api frontend
 categories: [markdown]
-title: Rohan G nba api frontend
----
+title: Rohan G nba api 
 
-{% include nav_data.html %}
-
+<html>
 <!-- HTML table fragment for page -->
 <table>
   <thead>
@@ -41,12 +39,14 @@ title: Rohan G nba api frontend
 </table>
 
 <!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
+
+</html>
 <script>
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
 
   // prepare fetch options
-  const url = "https://free-nba.p.rapidapi.com/players?page=0&per_page=25";
+  const url = "http://localhost:8085/api/nba/daily";
 
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.

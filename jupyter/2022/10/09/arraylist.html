@@ -149,15 +149,23 @@ window.onload = wrap_img;
 
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
    
-    <span class="c1">// Creating 2 arraylists</span>
+    <span class="c1">// Creating an arraylist Jeopardy</span>
     <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">Jeopardy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
-    <span class="c1">// ArrayList&lt;String&gt; footballPlayers = new ArrayList&lt;String&gt;();</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">JeopardyPts</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
 
     <span class="c1">// Adding without index</span>
     <span class="n">Jeopardy</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"What is the capital of Chile?"</span><span class="p">);</span>
     <span class="n">Jeopardy</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"What is the capital of France?"</span><span class="p">);</span>
     <span class="n">Jeopardy</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"What is the capital of Brazil?"</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="o">=</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">JeopardyPts</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">JeopardyPts</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">JeopardyPts</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+    <span class="n">JeopardyPts</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+    <span class="n">JeopardyPts</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Jeopardy</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">JeopardyPts</span><span class="p">);</span>
 
     <span class="c1">// Adding players with index</span>
     <span class="n">Jeopardy</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s">"What is the capital of England?"</span><span class="p">);</span>
@@ -212,6 +220,7 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[What is the capital of Chile?, What is the capital of France?, What is the capital of Brazil?]
+[1, 2]
 setting the questions at certain indexes: 
 [What is the capital of England?, What is the capital of Ethiopia, What is the capital of Chile?, What is the capital of France?, What is the capital of Brazil?]
 

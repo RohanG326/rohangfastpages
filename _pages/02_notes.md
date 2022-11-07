@@ -4,6 +4,7 @@ title: Notes
 permalink: /notes/
 ---
 
+
 # Week 3
 ## If Statements
 - an if statement is a conditional piece of code that executes a certain procedure once a condition is met

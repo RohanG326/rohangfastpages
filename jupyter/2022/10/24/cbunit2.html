@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -142,10 +142,145 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// 2021 FRQ 1a and 1b</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WordMatch</span>
+<span class="p">{</span>
+<span class="cm">/** The secret string. */</span>
+<span class="kd">private</span> <span class="n">String</span> <span class="n">secret</span><span class="p">;</span>
+<span class="cm">/** Constructs a WordMatch object with the given secret string of lowercase letters. */</span>
+<span class="kd">public</span> <span class="nf">WordMatch</span><span class="p">(</span><span class="n">String</span> <span class="n">word</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="cm">/* implementation not shown */</span>
+<span class="p">}</span>
+<span class="cm">/** Returns a score for guess, as described in part (a).</span>
+<span class="cm">* Precondition: 0 &lt; guess.length() &lt;= secret.length()</span>
+<span class="cm">*/</span>
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">scoreGuess</span><span class="p">(</span><span class="n">String</span> <span class="n">guess</span><span class="p">)</span>
+<span class="p">{</span> <span class="cm">/* to be implemented in part (a) */</span> <span class="p">}</span>
+<span class="cm">/** Returns the better of two guesses, as determined by scoreGuess and the rules for a</span>
+<span class="cm">* tie-breaker that are described in part (b).</span>
+<span class="cm">* Precondition: guess1 and guess2 contain all lowercase letters.</span>
+<span class="cm">* guess1 is not the same as guess2.</span>
+<span class="cm">*/</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">findBetterGuess</span><span class="p">(</span><span class="n">String</span> <span class="n">guess1</span><span class="p">,</span> <span class="n">String</span> <span class="n">guess2</span><span class="p">)</span>
+<span class="p">{</span> <span class="cm">/* to be implemented in part (b) */</span> <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public int scoreGuess(String guess)</span>
+<span class="ansi-red-intense-fg ansi-bold">';' expected</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public String findBetterGuess(String guess1, String guess2)</span>
+<span class="ansi-red-intense-fg ansi-bold">';' expected</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WordMatch</span>
+<span class="p">{</span>
+<span class="cm">/** The secret string. */</span>
+<span class="kd">private</span> <span class="n">String</span> <span class="n">secret</span><span class="p">;</span>
+<span class="cm">/** Constructs a WordMatch object with the given secret string of lowercase letters. */</span>
+<span class="kd">public</span> <span class="nf">WordMatch</span><span class="p">(</span><span class="n">String</span> <span class="n">word</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">secret</span> <span class="o">=</span> <span class="n">word</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cm">/** Returns a score for guess, as described in part (a).</span>
+<span class="cm">* Precondition: 0 &lt; guess.length() &lt;= secret.length()</span>
+<span class="cm">*/</span>
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">scoreGuess</span><span class="p">(</span><span class="n">String</span> <span class="n">guess</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">times</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="c1">// initializes the occurences</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">secret</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// for as long as i is not greater than the length of the secret word, it will iterate</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+    <span class="c1">// x is the end length of the guess</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">secret</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">secret</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="n">guess</span><span class="p">))</span>
+<span class="c1">// if x is shorter than the the secret of the word, then it will keep going</span>
+      <span class="n">times</span><span class="o">++</span><span class="p">;</span>
+    <span class="c1">// increments if the guess matches the substring secret</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">times</span> <span class="o">*</span> <span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">*</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="cm">/** Returns the better of two guesses, as determined by scoreGuess and the rules for a</span>
+<span class="cm">* tie-breaker that are described in part (b).</span>
+<span class="cm">* Precondition: guess1 and guess2 contain all lowercase letters.</span>
+<span class="cm">* guess1 is not the same as guess2.</span>
+<span class="cm">*/</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">findBetterGuess</span><span class="p">(</span><span class="n">String</span> <span class="n">guess1</span><span class="p">,</span> <span class="n">String</span> <span class="n">guess2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">score1</span> <span class="o">=</span> <span class="n">scoreGuess</span><span class="p">(</span><span class="n">guess1</span><span class="p">);</span>
+  <span class="c1">// each of the guesses are put into the method before it to yield two integers</span>
+  <span class="kt">int</span> <span class="n">score2</span> <span class="o">=</span> <span class="n">scoreGuess</span><span class="p">(</span><span class="n">guess2</span><span class="p">);</span>
+  
+  <span class="c1">//compares the ints using conditionals to return the word with a greater value</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">score1</span> <span class="o">&gt;</span> <span class="n">score2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">guess1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">score2</span> <span class="o">&gt;</span> <span class="n">score1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">guess2</span><span class="p">;</span>
+  <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// returns the guess that is a longer amount of characters if they are the same</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">guess1</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">guess2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">guess1</span><span class="p">;</span>
+    <span class="k">else</span>
+      <span class="k">return</span> <span class="n">guess2</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">WordMatch</span> <span class="n">testA</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WordMatch</span><span class="p">(</span><span class="s">"mississippi"</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">testA</span><span class="p">.</span><span class="na">scoreGuess</span><span class="p">(</span><span class="s">"is"</span><span class="p">));</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">testA</span><span class="p">.</span><span class="na">scoreGuess</span><span class="p">(</span><span class="s">"mississippi"</span><span class="p">));</span>
+
+    <span class="n">WordMatch</span> <span class="n">testB</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WordMatch</span><span class="p">(</span><span class="s">"concatenation"</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">testB</span><span class="p">.</span><span class="na">findBetterGuess</span><span class="p">(</span><span class="s">"ten"</span> <span class="p">,</span> <span class="s">"nation"</span><span class="p">));</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">testB</span><span class="p">.</span><span class="na">findBetterGuess</span><span class="p">(</span><span class="s">"con"</span><span class="p">,</span> <span class="s">"cat"</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="p">}</span> 
+<span class="n">WordMatch</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>8
+121
+nation
+con
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

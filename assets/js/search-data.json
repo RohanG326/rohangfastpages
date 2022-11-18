@@ -4,9 +4,9 @@
         "post0": {
             "title": "Rohan Gaikwad MCQ1 Test Corrections",
             "content": "Overall Score: 35/40 . Fairly easy, concepts weren’t too hard | A lot easier than some of the FRQs | . Corrections . Question 9 . . silly mistake | not supposed to add the sum each time | . Question 25 . . you can’t compare the sizes of the boxes based on the surface area and width alone, you need to compare the dimensions themselves | This is why choice 3 is not viable, but one and two are | . Question 31 . . when doing logic calculations, I misinterpreted data[k + 1] so I didn’t take in the next value in the calculations | again a simple mistake not a conceptual mistake | . Question 34 . . It is not option 3 because the x and y values are private so they can’t be updated within the method | . Question 39 . . i’m literally just dumb this was so easy | .",
-            "url": "https://rohang326.github.io/rohangfastpages/markdown/2022/11/07/mcq1.html",
-            "relUrl": "/markdown/2022/11/07/mcq1.html",
-            "date": " • Nov 7, 2022"
+            "url": "https://rohang326.github.io/rohangfastpages/markdown/2022/11/08/tri1mc.html",
+            "relUrl": "/markdown/2022/11/08/tri1mc.html",
+            "date": " • Nov 8, 2022"
         }
         
     
@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Rohan G CollegeBoard Writing Classes",
-            "content": "// Hack 1 int[] arrayOne = {1, 3, 5, 7, 9}; for (int i = 0, arrayOne.length, i==) { } . Hack 2 Which of the following is FALSE about arrays . A. A java array is an object B. Length of array can be changed after creation of array C. Numerical data types of arrays are initialized to 0 to start . B. . // Hack 7 for ( int k = 0; k &lt; a.length; k++ ) { while ( a[ k ] &lt; temp ) { a[ k ] *= 2; } } . Given the following code segment, which of the following will cause an infinite loop? Assume that temp is an int variable initialized to be greater than zero and that a is an array of integers. . A. The values don&#39;t matter this will always cause an infinite loop. | B. Whenever a includes a value that is less than or equal to zero. | C. Whenever a has values larger then temp. | D. When all values in a are larger than temp. | E. Whenever a includes a value equal to temp. | . // FRQ public void addMembers(String[] names, int gradYear) { for (String name : names) { memberList.add(new MemberInfo(name, gradYear, true)); } } .",
+            "content": "// Hack 1 int[] arrayOne = {1, 3, 5, 7, 9}; for (int i = 0, arrayOne.length, i==) { } . Hack 2 Which of the following is FALSE about arrays . A. A java array is an object B. Length of array can be changed after creation of array C. Numerical data types of arrays are initialized to 0 to start . B. . // Hack 3 int[] myNumbers = new int[] {5, 3, 4, 1, 2}; Arrays.sort(myNumbers); for (int num: myNumbers) { System.out.println(num); } . // Hack 4 for ( int k = 0; k &lt; a.length; k++ ) { while ( a[ k ] &lt; temp ) { a[ k ] *= 2; } } . // Hack 5 public class ForEachDemo { public static void main(String[] args) { int[] highScores = { 10, 9, 8, 8}; String[] names = {&quot;Jamal&quot;, &quot;Emily&quot;, &quot;Destiny&quot;, &quot;Mateo&quot;}; // for each loop with an int array for (int value : highScores) { System.out.println( value ); } // for each loop with a String array for (String value : names) { System.out.println(value); // this time it&#39;s a name! } } } . // Hack 7 for ( int k = 0; k &lt; a.length; k++ ) { while ( a[ k ] &lt; temp ) { a[ k ] *= 2; } } . // Computing Sums int[] array = {5, 1, 78}; // intialize int sum = 0; // variable to keep track of sum for (int number: array) { // iterates over each loop in the array sum += number; // the number is added to the sum } System.out.println(sum); //expected sum is 84, so 84 should be printed . // from college board private double findMax(double[] values) { double max = values[0]; // initialize max with first element of array for(int i=1; i&lt;values.length; i++) { // starting with the second element, iterate over the rest of the array if (values[i] &gt; max) { // if the current element is greater than the max max = values[i]; // set the max equal to the greatest value until that point } } return max; } . private int findEvenNumbers(int[] values) { int evenCount = 0; // initalize count of even numbers to zero for(int value: values) { // iterate over every element of array if(value % 2 == 0) { // use modulus operator to check if value is even evenCount += 1; // increment evenCount if the value is even } } return evenCount; } . Given the following code segment, which of the following will cause an infinite loop? Assume that temp is an int variable initialized to be greater than zero and that a is an array of integers. . A. The values don&#39;t matter this will always cause an infinite loop. | B. Whenever a includes a value that is less than or equal to zero. | C. Whenever a has values larger then temp. | D. When all values in a are larger than temp. | E. Whenever a includes a value equal to temp. | . WE WON THE BINGO!! . // FRQ public void addMembers(String[] names, int gradYear) { for (String name : names) { memberList.add(new MemberInfo(name, gradYear, true)); } } .",
             "url": "https://rohang326.github.io/rohangfastpages/jupyter/2022/10/25/arrays.html",
             "relUrl": "/jupyter/2022/10/25/arrays.html",
             "date": " • Oct 25, 2022"
@@ -47,7 +47,7 @@
     
         ,"post4": {
             "title": "Rohan G CollegeBoard Writing Classes",
-            "content": "// FRQ #2 public class StepTracker { private int totalSteps; private int minimumSteps; private int days; private int activeDays; public StepTracker(int min){ minimumSteps = min; totalSteps = 0; days = 0; activeDays = 0; } public void addDailySteps(int steps){ totalSteps += steps; days++; if (steps &gt;= minSteps){ activeDays++; } } public double averageSteps(){ if (days == 0){ return 0.0; } else{ return (double) totalSteps / days; } } public int getActiveDays(){ return days; } } . Hack 1 . public class Cow { public String type; public String sound; public int milk; public Cow(String type, String sound, int milk) { this.type = type; this.sound = sound; this.milk = milk; } public String getType() { return this.type; } public String getSound() { return this.sound; } public static void main(String[] args) { Cow tommy = new Cow(&quot;white&quot;, &quot;moo&quot;, 5); Cow jacky = new Cow(&quot;black&quot;, &quot;meow&quot;, 3); System.out.println(tommy.getSound()); } } Cow.main(null); . moo .",
+            "content": "public class StepTracker { // initialize variables private int minActiveSteps; private int totalSteps; private int numTotalDays; private int numActiveDays; // set default construct public StepTracker(int minActiveSteps) { this.minActiveSteps = minActiveSteps; this.totalSteps = 0; this.numTotalDays = 0; this.numActiveDays = 0; } // once per day, increment steps, days, and possibly active public void addDailySteps(int numSteps) { this.totalSteps += numSteps; this.numTotalDays++; if (numSteps &gt;= this.minActiveSteps) { this.numActiveDays++; } } // getter public int activeDays() { return this.numActiveDays; } // calculate public double averageSteps() { if (numTotalDays == 0) { return 0.0; } else { return (double) this.totalSteps/this.numTotalDays; } } } . // FRQ #2 public class StepTracker { private int totalSteps; private int minimumSteps; private int days; private int activeDays; public StepTracker(int min){ minimumSteps = min; totalSteps = 0; days = 0; activeDays = 0; } public void addDailySteps(int steps){ totalSteps += steps; days++; if (steps &gt;= minSteps){ activeDays++; } } public double averageSteps(){ if (days == 0){ return 0.0; } else{ return (double) totalSteps / days; } } public int getActiveDays(){ return days; } } . Hack . public class Cow { public String type; public String sound; public int milk; public Cow(String type, String sound, int milk) { this.type = type; this.sound = sound; this.milk = milk; } public String getType() { return this.type; } public String getSound() { return this.sound; } public static void main(String[] args) { Cow tommy = new Cow(&quot;white&quot;, &quot;moo&quot;, 5); Cow jacky = new Cow(&quot;black&quot;, &quot;meow&quot;, 3); System.out.println(tommy.getSound()); } } Cow.main(null); . moo .",
             "url": "https://rohang326.github.io/rohangfastpages/jupyter/2022/10/19/writingclasses.html",
             "relUrl": "/jupyter/2022/10/19/writingclasses.html",
             "date": " • Oct 19, 2022"
@@ -399,6 +399,9 @@
   
 
   
+  
+
+  
 
   
 
@@ -406,7 +409,7 @@
   
 
   
-      ,"page14": {
+      ,"page15": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://rohang326.github.io/rohangfastpages/robots.txt",

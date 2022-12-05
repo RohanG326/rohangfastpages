@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Iteration Lesson | Rohan G APCSA</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Iteration Lesson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://rohang326.github.io/rohangfastpages/college%20board/units/2022/10/18/Unit-4-Iteration.html" />
+<meta property="og:url" content="https://rohang326.github.io/rohangfastpages/college%20board/units/2022/10/18/Unit-4-Iteration.html" />
+<meta property="og:site_name" content="Rohan G APCSA" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-18T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Iteration Lesson" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-18T00:00:00-05:00","datePublished":"2022-10-18T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Iteration Lesson","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohang326.github.io/rohangfastpages/college%20board/units/2022/10/18/Unit-4-Iteration.html"},"url":"https://rohang326.github.io/rohangfastpages/college%20board/units/2022/10/18/Unit-4-Iteration.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/rohangfastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohang326.github.io/rohangfastpages/feed.xml" title="Rohan G APCSA" /><link rel="shortcut icon" type="image/x-icon" href="/rohangfastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/rohangfastpages/">Rohan G APCSA</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/rohangfastpages/search/">Search</a><a class="page-link" href="/rohangfastpages/about/">About Me</a><a class="page-link" href="/rohangfastpages/notes/">Notes</a><a class="page-link" href="/rohangfastpages/pbl/">PBL</a><a class="page-link" href="/rohangfastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Iteration Lesson</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-18T00:00:00-05:00" itemprop="datePublished">
+        Oct 18, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      12 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/rohangfastpages/categories/#college board">college board</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/rohangfastpages/categories/#units">units</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/RohanG326/rohangfastpages/tree/master/_notebooks/2022-10-18-Unit-4-Iteration.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/rohangfastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/RohanG326/rohangfastpages/master?filepath=_notebooks%2F2022-10-18-Unit-4-Iteration.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/RohanG326/rohangfastpages/blob/master/_notebooks/2022-10-18-Unit-4-Iteration.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FRohanG326%2Frohangfastpages%2Fblob%2Fmaster%2F_notebooks%2F2022-10-18-Unit-4-Iteration.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Iteration-in-Java">Iteration in Java </a></li>
+<li class="toc-entry toc-h2"><a href="#4.1-While-Loops-(2.B,-3.C)">4.1 While Loops (2.B, 3.C) </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Do-While-loop">Do While loop </a></li>
+<li class="toc-entry toc-h3"><a href="#Hacks">Hacks </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#4.2-For-Loops">4.2 For Loops </a></li>
+<li class="toc-entry toc-h2"><a href="#Three-Parts-of-a-For-Loop">Three Parts of a For Loop </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Example">Example </a></li>
+<li class="toc-entry toc-h3"><a href="#Control-Flow-Diagram">Control Flow Diagram </a></li>
+<li class="toc-entry toc-h3"><a href="#Hacks">Hacks </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#--Change-the-code-above-to-iterate-instead-from-1-5-to-10-15.-(Print-numbers-10-15)">- Change the code above to iterate instead from 1-5 to 10-15. (Print numbers 10-15) </a></li>
+<li class="toc-entry toc-h4"><a href="#--Convert-10-numbers-of-your-choice-from-two-temperature-units-(F-to-C,-C-to-F,-C-to-K)">- Convert 10 numbers of your choice from two temperature units (F to C, C to F, C to K) </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#4.3-Loops-and-Strings">4.3 Loops and Strings </a></li>
+<li class="toc-entry toc-h2"><a href="#4.4-Nested-Iteration">4.4 Nested Iteration </a></li>
+<li class="toc-entry toc-h2"><a href="#For-Each-Loops-or-enhanced-for-loops">For Each Loops or enhanced for loops </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#What-is-a-for-each-loop?">What is a for each loop? </a></li>
+<li class="toc-entry toc-h3"><a href="#Hacks">Hacks </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Final-Hacks/HOMEWORK">Final Hacks/HOMEWORK </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-10-18-Unit-4-Iteration.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Iteration-in-Java">
+<a class="anchor" href="#Iteration-in-Java" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration in Java<a class="anchor-link" href="#Iteration-in-Java"> </a>
+</h2>
+<p>Lesson Purpose: Review types of iteration and usages</p>
+<p>Lesson Objectives:</p>
+<ol>
+<li>review while/for loops</li>
+<li>review string</li>
+<li>nested iteration review</li>
+</ol>
+<p>Iteration may be one of the most crucial features for any programming language, since they allow computers to do what they do best: do copious amounts of menial tasks quickly and efficiently.</p>
+<p>Of course, Java can also perform iteration using numerous different structures. Today we'll be going over some of them.</p>
+<p>First of all, the exam weights Iteration as 17.5-22.5% of the test, with 7-9 MC and part of FRQ 1. This is one of the largest if not the largest unit, so understanding how iteration works is critical to performance on the test as well as in basically all aspects of coding.</p>
+<p>The overall purpose of iteration is to simplify code by allowing it to repeat. Loops will usually include some sort of conditional to check against, and while that conditional is true, the code within the loop will repeat.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.1-While-Loops-(2.B,-3.C)">
+<a class="anchor" href="#4.1-While-Loops-(2.B,-3.C)" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.1 <mark>While Loops</mark> (2.B, 3.C)<a class="anchor-link" href="#4.1-While-Loops-(2.B,-3.C)"> </a>
+</h2>
+<ul>
+<li>Repeats lines of code until a certain condition evaluates to false</li>
+</ul>
+<p>While loops consist of 2 portions: the boolean expression and the brackets which store the looping code inside.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">condition</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The boolean expression is checked before the loop is started and every time the loop ends and is about to start anew. Usually, inside the loop something is done that slightly changes the conditions for the boolean expression until it reads false and ends. In the example below, the condition is x &gt; 0, meaning that x has to be changed for the loop to stop. Inside the loop, x is decremented by 1 every time, changing the conditions over and over again until it finally returns false and terminates the while loop.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="c1">// The boolean expression in this case is x &gt; 0</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+    <span class="n">x</span><span class="o">--</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+4
+3
+2
+1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One of the most basic applications of while loops is its ability to iterate over numerous elements. One such example would be summing up the numbers in an array:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+<span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">total</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>43
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One unique application of while loops lie in infinite while loops, loops that run over and over again permanently. This is usually accomplished by setting the boolean condition to be true at all times. The only way to stop these loops are to use a break command, which ends the loop regardless of the conditions present.</p>
+<p>This can be used for various things, like having a running process at all times or constantly taking in input from the user, like the example below:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">choice</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Would you like to continue: "</span><span class="p">);</span>
+    <span class="n">choice</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">choice</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"No"</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Would you like to continue: 
+Would you like to continue: 
+Would you like to continue: 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Do-While-loop">
+<a class="anchor" href="#Do-While-loop" aria-hidden="true"><span class="octicon octicon-link"></span></a><mark>Do While loop</mark><a class="anchor-link" href="#Do-While-loop"> </a>
+</h3>
+<p>Do while loops are a variant of the while loop, where the code must be run first and then the condition is checked. In a normal while loop, the condition is checked then the code is run. So, a do while loop is forced to run at least once, which could be useul.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>    
+<span class="k">do</span><span class="p">{</span>    
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>    <span class="c1">// forced to run</span>
+    <span class="n">i</span><span class="o">++</span><span class="p">;</span>    
+<span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// starts out false</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>    
+    <span class="n">i</span><span class="o">++</span><span class="p">;</span> 
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h3>
+<p>Say you have a company that makes a profit of $5,450,000 this year. Every year, the company has a profit increase of 5%. Determine how many years it would take to make a profit of at least $30,000,000 using a while loop.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WhileLoops</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">WhileLoops</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.2-For-Loops">
+<a class="anchor" href="#4.2-For-Loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2 <mark>For Loops</mark><a class="anchor-link" href="#4.2-For-Loops"> </a>
+</h2>
+<ul>
+<li>One of the most tested concepts in the APCSA exam</li>
+<li>Skills 3.C, 4.C, and 5.C</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Three-Parts-of-a-For-Loop">
+<a class="anchor" href="#Three-Parts-of-a-For-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Three Parts of a For Loop<a class="anchor-link" href="#Three-Parts-of-a-For-Loop"> </a>
+</h2>
+<ul>
+<li>Initialization of a variable</li>
+<li>Test condition </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">initialize</span><span class="p">;</span> <span class="n">test</span> <span class="n">condition</span><span class="p">;</span> <span class="n">change</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">loop</span> <span class="n">body</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Example">
+<a class="anchor" href="#Example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example<a class="anchor-link" href="#Example"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+4
+5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Control-Flow-Diagram">
+<a class="anchor" href="#Control-Flow-Diagram" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control Flow Diagram<a class="anchor-link" href="#Control-Flow-Diagram"> </a>
+</h3>
+<p><img src="https://runestone.academy/ns/books/published/csawesome/_images/ForLoopFlow.png" alt="image"></p>
+<ul>
+<li>The code in the initialization area is executed only one time before the loop begins </li>
+<li>the test condition is checked each time through the loop and the loop continues as long as the condition is true</li>
+<li>the loop control variable change is done at the end of each execution of the body of the loop</li>
+<li>When the loop condition is false, execution will continue at the next statement after the body of the loop.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h3>
+<h4 id="--Change-the-code-above-to-iterate-instead-from-1-5-to-10-15.-(Print-numbers-10-15)">
+<a class="anchor" href="#--Change-the-code-above-to-iterate-instead-from-1-5-to-10-15.-(Print-numbers-10-15)" aria-hidden="true"><span class="octicon octicon-link"></span></a>- Change the code above to iterate instead from 1-5 to 10-15. (Print numbers 10-15)<a class="anchor-link" href="#--Change-the-code-above-to-iterate-instead-from-1-5-to-10-15.-(Print-numbers-10-15)"> </a>
+</h4>
+<h4 id="--Convert-10-numbers-of-your-choice-from-two-temperature-units-(F-to-C,-C-to-F,-C-to-K)">
+<a class="anchor" href="#--Convert-10-numbers-of-your-choice-from-two-temperature-units-(F-to-C,-C-to-F,-C-to-K)" aria-hidden="true"><span class="octicon octicon-link"></span></a>- Convert 10 numbers of your choice from two temperature units (F to C, C to F, C to K)<a class="anchor-link" href="#--Convert-10-numbers-of-your-choice-from-two-temperature-units-(F-to-C,-C-to-F,-C-to-K)"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ForLoops</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">ForLoops</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.3-Loops-and-Strings">
+<a class="anchor" href="#4.3-Loops-and-Strings" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.3 Loops and Strings<a class="anchor-link" href="#4.3-Loops-and-Strings"> </a>
+</h2>
+<p>Strings can also be manipulated through the use of iteration. Strings can actually be thought of as an array of chars, so each char can also be manipulated as well!</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"CodeCodeCode"</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">name</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Co
+de
+Co
+de
+Co
+de
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.4-Nested-Iteration">
+<a class="anchor" href="#4.4-Nested-Iteration" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.4 <mark>Nested Iteration</mark><a class="anchor-link" href="#4.4-Nested-Iteration"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nested iteration is where there is a loop within a loop. It's kind of similar to the nested conditional that we learned yesterday in syntax.</p>
+<p>A typical usage of nested looping is for two dimensions, like getting the pixel value of each pixel in an image across the columns and rows of pixels. Or, it can be used to print across these rows and columns to display some text</p>
+<p>A very common nested iteration is the use of nested for loops, as they are concise enough to be used within each other without getting confused. Here is an example of code that uses nested for loops:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">row</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="sc">'*'</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>****
+****
+****
+****
+****
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As seen, the code above has an output of 20 stars, with 5 rows and 4 columns. The amount of times the nested iterations loop in total will be the amount the outer one iterates multiplied by the inner one. The inner loop must finish all of its iterations before the outer loop can continue.</p>
+<p>Question:</p>
+<ul>
+<li>What happens if you swap the inner with the outer loop? What change will the output make?</li>
+</ul>
+<p>There can also be nested while loops, although they are not as practical, having to write out those variables outside of the condition.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Creator: Nighthawk Coding Society</span>
+<span class="cm"> * Mini Lab Name: Hello Series,featuring Monkey Jumpers</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Class for Monkey: a 2D array of Monkey</span>
+<span class="cm"> * As well as method to print the Poem</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">Monkey</span> <span class="p">{</span>
+    <span class="c1">//The area between class definition and the 1st method is where we keep data for object in Java</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">[]&gt;</span> <span class="n">monkeyList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">[]&gt;</span><span class="p">();</span>    <span class="c1">//2D Array: AP CSA Unit 8: 2D array of strings</span>
+    <span class="kd">private</span> <span class="n">String</span><span class="o">[]</span> <span class="n">monkeyASCII</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Constructor initializes a 2D array of Monkey</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Monkey</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">monkeyASCII</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">monkeyASCII</span> <span class="o">=</span> <span class="n">monkeyASCII</span><span class="p">;</span>
+        <span class="n">monkeyList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">monkeyASCII</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Loop and print monkey in array</span>
+<span class="cm">     * ... repeat until you reach zero  ...</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printPoem</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//begin the poem</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Monkey Jumpers Poem in Java with Objects!!!"</span><span class="p">);</span>
+
+        <span class="c1">// monkey (non-primitive) defined in constructor knows its length</span>
+        <span class="kt">int</span> <span class="n">monkeyCount</span> <span class="o">=</span> <span class="n">monkeyList</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">monkeyCount</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  <span class="c1">//loops through 2D array length forwards</span>
+        <span class="p">{</span>
+
+            <span class="c1">//this print statement shows current count of Monkey</span>
+            <span class="c1">//  concatenation (+) of the loop variable and string to form a countdown message</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">" little monkey jumping on the bed..."</span><span class="p">);</span>
+
+            <span class="c1">//how many separate parts are there in a monkey monkey?</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//cycles through "cells" of 2d array</span>
+
+                <span class="cm">/*cycles through columns to print</span>
+<span class="cm">                each monkey part by part, will eventually print entire column*/</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">monkeyList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">row</span><span class="p">).</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+
+                    <span class="c1">// prints specific part of the monkey from the column</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">monkeyList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">row</span><span class="p">)</span><span class="o">[</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+
+                    <span class="c1">//this is new line between separate parts</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+                <span class="p">}</span>
+                
+                <span class="c1">//this new line gives separation between stanza of poem</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+            <span class="p">}</span>
+
+            <span class="c1">//countdown for poem, decrementing monkeyCount variable by 1</span>
+            <span class="n">monkeyCount</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//out of all the loops, prints finishing messages</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Too many monkeys jumping on the bed"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"0000000000000000000000000000000000"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"             THE END              "</span><span class="p">);</span>
+    <span class="p">}</span>
+
+   
+    <span class="cm">/**</span>
+<span class="cm">    * A Java Driver/Test method that is the entry point for execution</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>  <span class="p">{</span>
+        <span class="n">Monkey</span> <span class="n">monkey0</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Monkey</span><span class="p">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span>
+            <span class="s">"ʕง ͠° ͟ل͜ ͡°)ʔ "</span><span class="p">,</span>      <span class="c1">//[0][0] eyes</span>
+            <span class="s">"  \\_⏄_/  "</span><span class="p">,</span>      <span class="c1">//[0][1] chin</span>
+            <span class="s">"  --0--   "</span><span class="p">,</span>       <span class="c1">//[0][2] body</span>
+            <span class="s">"  ⎛   ⎞   "</span>        <span class="c1">//[0][3] legs</span>
+        <span class="p">});</span>
+        <span class="n">Monkey</span> <span class="n">monkey1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Monkey</span><span class="p">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span>
+            <span class="s">" ʕ༼ ◕_◕ ༽ʔ"</span><span class="p">,</span>       <span class="c1">//[1][0]</span>
+            <span class="s">"  \\_⎏_/  "</span><span class="p">,</span>
+            <span class="s">"  ++1++  "</span><span class="p">,</span>
+            <span class="s">"   ⌋ ⌊   "</span>
+        <span class="p">});</span>
+        <span class="n">Monkey</span> <span class="n">monkey2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Monkey</span><span class="p">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span>
+            <span class="s">" ʕ(▀ ⍡ ▀)ʔ"</span><span class="p">,</span>       <span class="c1">//[2][0]</span>
+            <span class="s">"  \\_⎐_/ "</span><span class="p">,</span>
+            <span class="s">"  &lt;-2-&gt;  "</span><span class="p">,</span>
+            <span class="s">"  〈  〉 "</span>
+        <span class="p">});</span>
+        <span class="n">Monkey</span> <span class="n">monkey3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Monkey</span><span class="p">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span>
+            <span class="s">"ʕ ͡° ͜ʖ ° ͡ʔ"</span><span class="p">,</span>        <span class="c1">//[3][0]</span>
+            <span class="s">"  \\_⍾_/  "</span><span class="p">,</span>
+            <span class="s">"  ==3==  "</span><span class="p">,</span>
+            <span class="s">"  _/ \\_  "</span>
+        <span class="p">});</span>
+        <span class="n">Monkey</span> <span class="n">monkey4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Monkey</span><span class="p">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span>
+            <span class="s">"  (◕‿◕✿) "</span><span class="p">,</span>          <span class="c1">//[4][0]</span>
+            <span class="s">"  \\_⍾_/ "</span><span class="p">,</span>          <span class="c1">//[4][1]</span>
+            <span class="s">"  ==4==  "</span><span class="p">,</span>          <span class="c1">//[4][2]</span>
+            <span class="s">"  _/ \\_ "</span>           <span class="c1">//[4][3]</span>
+        <span class="p">});</span>
+
+        
+        <span class="n">Monkey</span><span class="p">.</span><span class="na">printPoem</span><span class="p">();</span>   <span class="c1">//a new monkey list and output in one step</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="n">Monkey</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Monkey Jumpers Poem in Java with Objects!!!
+1 little monkey jumping on the bed...
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+2 little monkey jumping on the bed...
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ ʕ༼ ◕_◕ ༽ʔ 
+  \_⎏_/   
+  ++1++   
+   ⌋ ⌊    
+
+3 little monkey jumping on the bed...
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ ʕ༼ ◕_◕ ༽ʔ 
+  \_⎏_/   
+  ++1++   
+   ⌋ ⌊    
+
+ ʕ(▀ ⍡ ▀)ʔ 
+  \_⎐_/  
+  &lt;-2-&gt;   
+  〈  〉  
+
+Too many monkeys jumping on the bed
+0000000000000000000000000000000000
+             THE END              
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Some modification to the code has been made, such as making monkeys an object, but the overall idea remains the same. It first iterates into a row on the 2d array, and then iterates through all columns of that row in the 2d array by using the nested iteration.</p>
+<p>Questions:</p>
+<ol>
+<li>Do you remember how to make it not backwards?</li>
+<li>What would swapping the inner and outer loops do? (assuming that array indices are fixed)</li>
+<li>What if we only wanted to print every other monkey?</li>
+<li>What if we wanted to print every other body part of the monkey?</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NestedIteration</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">NestedIteration</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="For-Each-Loops-or-enhanced-for-loops">
+<a class="anchor" href="#For-Each-Loops-or-enhanced-for-loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Each Loops or <mark>enhanced for loops</mark><a class="anchor-link" href="#For-Each-Loops-or-enhanced-for-loops"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="What-is-a-for-each-loop?">
+<a class="anchor" href="#What-is-a-for-each-loop?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is a for each loop?<a class="anchor-link" href="#What-is-a-for-each-loop?"> </a>
+</h3>
+<p>As the name suggests, for-each loops are similar to for loops. In Java, the for-each loop is used to iterate through elements of arrays and collections (like ArrayList). It is also known as the enhanced for loop.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is the syntax for a for-each loop:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="n">dataType</span> <span class="n">item</span> <span class="p">:</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>includes:</p>
+<ul>
+<li>array: an array or collection</li>
+<li>item: each value in an array or collection</li>
+<li>dataType: specify the type of data in the array (int)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Example</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ForEachLoops</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="c1">// create an array</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">};</span>
+    
+            <span class="c1">// for each loop </span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Output:</p>
+<p>2 
+10
+5
+12</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this example we used for each loops to iterate through the array, "data" and print out each number. The code is saying that for each value in the array, print out the number.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So why not just stick to the for loop? What's the purpose?</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//For Loop</span>
+<span class="kt">char</span><span class="o">[]</span> <span class="n">word</span> <span class="o">=</span> <span class="p">{</span><span class="sc">'m'</span><span class="p">,</span> <span class="sc">'o'</span><span class="p">,</span> <span class="sc">'n'</span><span class="p">,</span> <span class="sc">'k'</span><span class="p">,</span> <span class="sc">'e'</span><span class="p">,</span> <span class="sc">'y'</span><span class="p">};</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">word</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">word</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>m
+o
+n
+k
+e
+y
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//For Each Loop</span>
+<span class="kt">char</span><span class="o">[]</span> <span class="n">word</span> <span class="o">=</span> <span class="p">{</span><span class="sc">'m'</span><span class="p">,</span> <span class="sc">'o'</span><span class="p">,</span> <span class="sc">'n'</span><span class="p">,</span> <span class="sc">'k'</span><span class="p">,</span> <span class="sc">'e'</span><span class="p">,</span> <span class="sc">'y'</span><span class="p">};</span>
+  
+<span class="k">for</span> <span class="p">(</span><span class="kt">char</span> <span class="n">letter</span><span class="p">:</span> <span class="n">word</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">letter</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>m
+o
+n
+k
+e
+y
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Both lines of codes yield the same results but the for-each loop is obviously much simpiler and easier to understand.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For each iteration, the for-each loop takes each element of the collection and stores it in a loop variable. Thus, it executes the code written in the body of the loop for each element of the array or collection.</p>
+<p>Most importantly, the traversal happens until the last element of the array or collection. No indexing is involved</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pros:</p>
+<ul>
+<li>makes code easier to read and understand</li>
+<li>eliminates possible coding mistakes</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>The drawback of the enhanced for loop (for-each loop) is that it cannot traverse the elements in reverse order. In the for each loop you do not have the option to skip any element because it does not work on an index basis. Moreover, you cannot traverse the odd or even elements only.</li>
+<li>limited variability to the collection</li>
+<li>situational</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Could I use a for-each loop to print out 4 of the 5 elements of an array only?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Write a for-each loop that adds up all the values of the array (sum):</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">numbers</span><span class="o">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>and print the results</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Final-Hacks/HOMEWORK">
+<a class="anchor" href="#Final-Hacks/HOMEWORK" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final Hacks/HOMEWORK<a class="anchor-link" href="#Final-Hacks/HOMEWORK"> </a>
+</h2>
+<p>Try to write a caesar cipher program that shifts each letter in a message 3 letters forward. Use any of the methods you learned today. Use it to decode the 3 messages we've given you!</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CaesarCipher</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="n">String</span><span class="o">[]</span> <span class="n">letters</span> <span class="o">=</span> <span class="p">{</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span> <span class="s">"g"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span> <span class="s">"i"</span><span class="p">,</span> <span class="s">"j"</span><span class="p">,</span> <span class="s">"k"</span><span class="p">,</span> <span class="s">"l"</span><span class="p">,</span> <span class="s">"m"</span><span class="p">,</span> <span class="s">"n"</span><span class="p">,</span> <span class="s">"o"</span><span class="p">,</span> <span class="s">"p"</span><span class="p">,</span> <span class="s">"q"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">,</span> <span class="s">"s"</span><span class="p">,</span> <span class="s">"t"</span><span class="p">,</span> <span class="s">"u"</span><span class="p">,</span> <span class="s">"v"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">,</span> <span class="s">"x"</span><span class="p">,</span> <span class="s">"y"</span><span class="p">,</span> <span class="s">"z"</span><span class="p">};</span>
+        <span class="n">String</span> <span class="n">message1</span> <span class="o">=</span> <span class="s">"Kfzb gly!"</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">message2</span> <span class="o">=</span> <span class="s">"zlab zlab zlab"</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">message3</span> <span class="o">=</span> <span class="s">"prmbozxifcoxdfifpqfzbumfxifalzflrp"</span><span class="p">;</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="RohanG326/rohangfastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/rohangfastpages/college%20board/units/2022/10/18/Unit-4-Iteration.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/rohangfastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/rohangfastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/rohangfastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

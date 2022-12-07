@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Rohan G CollegeBoard Unit 7 ArrayLists | Rohan G APCSA</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Rohan G CollegeBoard Unit 7 ArrayLists" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Week 15 Unit 7 ArrayLists Lesson and Homework" />
+<meta property="og:description" content="Week 15 Unit 7 ArrayLists Lesson and Homework" />
+<link rel="canonical" href="https://rohang326.github.io/rohangfastpages/jupyter/2022/12/05/cbunit7.html" />
+<meta property="og:url" content="https://rohang326.github.io/rohangfastpages/jupyter/2022/12/05/cbunit7.html" />
+<meta property="og:site_name" content="Rohan G APCSA" />
+<meta property="og:image" content="https://rohang326.github.io/rohangfastpages/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-05T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://rohang326.github.io/rohangfastpages/images/chart-preview.png" />
+<meta property="twitter:title" content="Rohan G CollegeBoard Unit 7 ArrayLists" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-05T00:00:00-06:00","datePublished":"2022-12-05T00:00:00-06:00","description":"Week 15 Unit 7 ArrayLists Lesson and Homework","headline":"Rohan G CollegeBoard Unit 7 ArrayLists","image":"https://rohang326.github.io/rohangfastpages/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohang326.github.io/rohangfastpages/jupyter/2022/12/05/cbunit7.html"},"url":"https://rohang326.github.io/rohangfastpages/jupyter/2022/12/05/cbunit7.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/rohangfastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohang326.github.io/rohangfastpages/feed.xml" title="Rohan G APCSA" /><link rel="shortcut icon" type="image/x-icon" href="/rohangfastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/rohangfastpages/">Rohan G APCSA</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/rohangfastpages/search/">Search</a><a class="page-link" href="/rohangfastpages/about/">About Me</a><a class="page-link" href="/rohangfastpages/notes/">Notes</a><a class="page-link" href="/rohangfastpages/pbl/">PBL</a><a class="page-link" href="/rohangfastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Rohan G CollegeBoard Unit 7 ArrayLists</h1><p class="page-description">Week 15 Unit 7 ArrayLists Lesson and Homework</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-05T00:00:00-06:00" itemprop="datePublished">
+        Dec 5, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/rohangfastpages/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/RohanG326/rohangfastpages/tree/master/_notebooks/2022-12-05-cbunit7.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/rohangfastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/RohanG326/rohangfastpages/master?filepath=_notebooks%2F2022-12-05-cbunit7.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/RohanG326/rohangfastpages/blob/master/_notebooks/2022-12-05-cbunit7.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FRohanG326%2Frohangfastpages%2Fblob%2Fmaster%2F_notebooks%2F2022-12-05-cbunit7.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Accessing-Elements">Accessing Elements </a></li>
+<li class="toc-entry toc-h1"><a href="#Modifying-Elements-Inside-an-Arraylist">Modifying Elements Inside an Arraylist </a></li>
+<li class="toc-entry toc-h1"><a href="#Removing-and-Clearing-Elements">Removing and Clearing Elements </a></li>
+<li class="toc-entry toc-h1"><a href="#Arraylist-Searching-Methods">Arraylist Searching Methods </a></li>
+<li class="toc-entry toc-h1"><a href="#Sorting-Elements-of-Arraylist">Sorting Elements of Arraylist </a></li>
+<li class="toc-entry toc-h1"><a href="#Homework">Homework </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-12-05-cbunit7.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First you have to import the java arraylist. This is done by:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+</pre></div>
+<p>Then you can create the arraylist</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One of the best things about arraylists is that you can add and remove elements from the arraylist after you initialize it. This means that the length of the arraylist can change after you create it, unlike in arrays.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span> <span class="c1">// import the ArrayList class</span>
+
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Rohan"</span><span class="p">);</span><span class="c1">//adding values to list</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Adi"</span><span class="p">);</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Soma"</span><span class="p">);</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Jazair"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Number of elements: "</span> <span class="o">+</span><span class="n">names</span><span class="p">.</span><span class="na">size</span><span class="p">());</span><span class="c1">//prints the number of elements in the arraylist</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">names</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span><span class="c1">//printing all values in list using for loop</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Number of elements: 4
+Rohan
+Adi
+Soma
+Jazair
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Accessing-Elements">
+<a class="anchor" href="#Accessing-Elements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessing Elements<a class="anchor-link" href="#Accessing-Elements"> </a>
+</h1>
+<p>To access an element in an arraylist, you use the get() method. Inside the method, put the index of element that you are trying to access(remember the arraylist starts at index 0).</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">nums</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span><span class="c1">//making list</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">nums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="c1">//adding value</span>
+    <span class="p">}</span>
+
+
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">nums</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">);</span><span class="c1">//cool way of squaring all the values. </span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span><span class="c1">//printing these values</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+4
+9
+16
+25
+36
+49
+64
+81
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Modifying-Elements-Inside-an-Arraylist">
+<a class="anchor" href="#Modifying-Elements-Inside-an-Arraylist" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modifying Elements Inside an Arraylist<a class="anchor-link" href="#Modifying-Elements-Inside-an-Arraylist"> </a>
+</h1>
+<p>As shown above in the code block, to modify or change code from elements that have already been set, use the set() method. The set method takes two parameters. The first parameter is the index that you are trying to modify. The second parameter is the value that you are giving the index in the first parameter</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Examples:</span>
+<span class="n">nums</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+<span class="n">names</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">"John"</span><span class="p">);</span>
+<span class="n">letters</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="sc">'D'</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Removing-and-Clearing-Elements">
+<a class="anchor" href="#Removing-and-Clearing-Elements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Removing and Clearing Elements<a class="anchor-link" href="#Removing-and-Clearing-Elements"> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">nums</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">nums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<span class="n">nums</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">());</span><span class="c1">//new size after removing value</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">());</span><span class="c1">//checks if list is empty after </span>
+<span class="n">nums</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span><span class="c1">//clears list</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">());</span><span class="c1">//list is now empty</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
+9
+false
+0
+true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Arraylist-Searching-Methods">
+<a class="anchor" href="#Arraylist-Searching-Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arraylist Searching Methods<a class="anchor-link" href="#Arraylist-Searching-Methods"> </a>
+</h1>
+<p>You can also use methods to search through arraylists and find certain elements. The indexOf() method returns the first occurrence of the given element or -1 if it doesn't exist. The lastIndexOf() returns the last occurrence of the element or -1 if it's not in the list. Another method that searches through the list is the contains() method.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span><span class="c1">//creating list</span>
+
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Rohan"</span><span class="p">);</span><span class="c1">//adding elements to list</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Adi"</span><span class="p">);</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Soma"</span><span class="p">);</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Jazair"</span><span class="p">);</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"John"</span><span class="p">);</span>
+<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Rohan"</span><span class="p">);</span>
+
+<span class="c1">//testing indexOf() and lastIndexOf()</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Testing indexOf() and lastIndexOf() "</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">"Rohan"</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="s">"Rohan"</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">"Billy"</span><span class="p">));</span>
+
+
+<span class="c1">//testing contains</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Testing contains"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"Rohan"</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"Billy"</span><span class="p">));</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Testing indexOf() and lastIndexOf() 
+0
+5
+-1
+Testing contains
+true
+false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sorting-Elements-of-Arraylist">
+<a class="anchor" href="#Sorting-Elements-of-Arraylist" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sorting Elements of Arraylist<a class="anchor-link" href="#Sorting-Elements-of-Arraylist"> </a>
+</h1>
+<p>One way and probably the easiest way to sort an arraylist is to use bubble sort. Bubble sort swaps the elements if they aren't in the right order, by iterating through every element one at a time. It isn't the most efficient algorithm, but it works.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">nums</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span><span class="c1">//creating arraylsit</span>
+<span class="n">nums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="c1">//adding elements to array</span>
+<span class="n">nums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+<span class="n">nums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+<span class="n">nums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="n">nums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">36</span><span class="p">);</span>
+<span class="n">nums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">nums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">89</span><span class="p">);</span>
+<span class="n">nums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="n">nums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Unsorted Arraylist"</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="c1">//printing unsorted elements</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s">" "</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//bubble sort algorithm</span>
+
+<span class="kt">boolean</span> <span class="n">isInOrder</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">isInOrder</span> <span class="o">==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">isInOrder</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="n">nums</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">nums</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span>
+            <span class="n">nums</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">temp</span><span class="p">);</span>
+            <span class="n">isInOrder</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\nSorted Arraylist"</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="c1">//printing arraylist again, but sorted this time</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s">" "</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Unsorted Arraylist
+1 6 8 4 36 2 89 100 4 
+Sorted Arraylist
+1 2 4 4 6 8 36 89 100 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Homework">
+<a class="anchor" href="#Homework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Homework<a class="anchor-link" href="#Homework"> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span> <span class="c1">// import the ArrayList class</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HomeWork1</span><span class="p">{</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">Random</span> <span class="n">rand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+
+    <span class="kt">void</span> <span class="nf">run</span><span class="p">(){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+            <span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span>
+         <span class="c1">//descending order then reverse first and last element</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Before operations: "</span><span class="o">+</span> <span class="n">numbers</span><span class="p">);</span>
+        <span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">Collections</span><span class="p">.</span><span class="na">reverseOrder</span><span class="p">());</span> 
+        <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="n">numbers</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">numbers</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+        <span class="n">numbers</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">temp</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"After operation: "</span><span class="o">+</span> <span class="n">numbers</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">HomeWork1</span> <span class="n">hw1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HomeWork1</span><span class="p">();</span>
+        <span class="n">hw1</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">HomeWork1</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Before operations: [18, 48, 47, 0, 65, 22, 85, 94, 67, 84]
+After operation: [0, 85, 84, 67, 65, 48, 47, 22, 18, 94]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span> <span class="c1">// import the ArrayList class</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HomeWork2</span><span class="p">{</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">Random</span> <span class="n">rand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+
+    <span class="kt">void</span> <span class="nf">run</span><span class="p">(){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+            <span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+        <span class="c1">//hashmaps before and after sort</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hash map before operation: "</span><span class="o">+</span> <span class="n">numbers</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
+        <span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hash map after operation: "</span><span class="o">+</span> <span class="n">numbers</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
+
+
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">HomeWork2</span> <span class="n">hw2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HomeWork2</span><span class="p">();</span>
+        <span class="n">hw2</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">HomeWork2</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hash map before operation: -534237819
+Hash map after operation: 1703608345
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span> <span class="c1">// import the ArrayList class</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HomeWork3</span><span class="p">{</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numbers1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numbers2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">Random</span> <span class="n">rand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+
+    <span class="kt">void</span> <span class="nf">run</span><span class="p">(){</span>
+        <span class="c1">//adding numbers to array 1</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+            <span class="n">numbers1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//adding numbers to array 2</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+            <span class="n">numbers2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+         <span class="c1">//replace three elements, then reverse order</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Before operations, Arraylist 1: "</span><span class="o">+</span> <span class="n">numbers1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Before operations, Arraylist 2: "</span><span class="o">+</span> <span class="n">numbers2</span><span class="p">);</span>
+        <span class="c1">//randomly swap elements from lists three times</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">replace</span> <span class="o">=</span> <span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+            <span class="n">numbers1</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">replace</span><span class="p">,</span><span class="n">numbers2</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">replace</span><span class="p">));</span>
+        <span class="p">}</span>
+        <span class="c1">//reverse order of array 1</span>
+        <span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">numbers1</span><span class="p">,</span> <span class="n">Collections</span><span class="p">.</span><span class="na">reverseOrder</span><span class="p">());</span> 
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"After operations, Arraylist 1: "</span><span class="o">+</span> <span class="n">numbers1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"After operations, Arraylist 2: "</span><span class="o">+</span> <span class="n">numbers2</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">HomeWork3</span> <span class="n">hw3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HomeWork3</span><span class="p">();</span>
+        <span class="n">hw3</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">HomeWork3</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Before operations, Arraylist 1: [15, 58, 89, 69, 39, 85, 2, 86, 5, 56]
+Before operations, Arraylist 2: [96, 17, 49, 7, 0, 77, 34, 43, 96, 83]
+After operations, Arraylist 1: [86, 85, 69, 56, 49, 39, 34, 17, 15, 5]
+After operations, Arraylist 2: [96, 17, 49, 7, 0, 77, 34, 43, 96, 83]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="RohanG326/rohangfastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/rohangfastpages/jupyter/2022/12/05/cbunit7.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/rohangfastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/rohangfastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/rohangfastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

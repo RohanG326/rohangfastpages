@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>2D Iterations and Repetition | Rohan G APCSA</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="2D Iterations and Repetition" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Unit 08 2D Arrays" />
+<meta property="og:description" content="Unit 08 2D Arrays" />
+<link rel="canonical" href="https://rohang326.github.io/rohangfastpages/jupyter/2022/12/06/cbunit8.html" />
+<meta property="og:url" content="https://rohang326.github.io/rohangfastpages/jupyter/2022/12/06/cbunit8.html" />
+<meta property="og:site_name" content="Rohan G APCSA" />
+<meta property="og:image" content="https://rohang326.github.io/rohangfastpages/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-06T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://rohang326.github.io/rohangfastpages/images/chart-preview.png" />
+<meta property="twitter:title" content="2D Iterations and Repetition" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-06T00:00:00-06:00","datePublished":"2022-12-06T00:00:00-06:00","description":"Unit 08 2D Arrays","headline":"2D Iterations and Repetition","image":"https://rohang326.github.io/rohangfastpages/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohang326.github.io/rohangfastpages/jupyter/2022/12/06/cbunit8.html"},"url":"https://rohang326.github.io/rohangfastpages/jupyter/2022/12/06/cbunit8.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/rohangfastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohang326.github.io/rohangfastpages/feed.xml" title="Rohan G APCSA" /><link rel="shortcut icon" type="image/x-icon" href="/rohangfastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/rohangfastpages/">Rohan G APCSA</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/rohangfastpages/search/">Search</a><a class="page-link" href="/rohangfastpages/about/">About Me</a><a class="page-link" href="/rohangfastpages/notes/">Notes</a><a class="page-link" href="/rohangfastpages/pbl/">PBL</a><a class="page-link" href="/rohangfastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">2D Iterations and Repetition</h1><p class="page-description">Unit 08 2D Arrays</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-06T00:00:00-06:00" itemprop="datePublished">
+        Dec 6, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      9 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/rohangfastpages/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/RohanG326/rohangfastpages/tree/master/_notebooks/2022-12-06-cbunit8.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/rohangfastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/RohanG326/rohangfastpages/master?filepath=_notebooks%2F2022-12-06-cbunit8.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/RohanG326/rohangfastpages/blob/master/_notebooks/2022-12-06-cbunit8.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FRohanG326%2Frohangfastpages%2Fblob%2Fmaster%2F_notebooks%2F2022-12-06-cbunit8.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#2D-Arrays">2D Arrays </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#College-Board">College Board </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Learning-Objectives">Learning Objectives </a></li>
+<li class="toc-entry toc-h3"><a href="#Creating-A-2D-Array">Creating A 2D Array </a></li>
+<li class="toc-entry toc-h3"><a href="#Initializing-a-2D-Array">Initializing a 2D Array </a></li>
+<li class="toc-entry toc-h3"><a href="#Iteration">Iteration </a></li>
+<li class="toc-entry toc-h3"><a href="#Accessing-and-Changing-Elements-of-2D-Arrays">Accessing and Changing Elements of 2D Arrays </a></li>
+<li class="toc-entry toc-h3"><a href="#Displaying-Contents-of-Array-Vertically-and-Horizontally">Displaying Contents of Array Vertically and Horizontally </a></li>
+<li class="toc-entry toc-h3"><a href="#Displaying-Backwards-and-Upside-Down">Displaying Backwards and Upside Down </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Kahoot">Kahoot </a></li>
+<li class="toc-entry toc-h1"><a href="#Homework">Homework </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-12-06-cbunit8.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2D-Arrays">
+<a class="anchor" href="#2D-Arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>2D Arrays<a class="anchor-link" href="#2D-Arrays"> </a>
+</h1>
+<p>A 2D array is an array of arrays, and a type of multidimensional array. To create a 2D array, you write the type of the class, followed by the name, and the values.</p>
+<h2 id="College-Board">
+<a class="anchor" href="#College-Board" aria-hidden="true"><span class="octicon octicon-link"></span></a>College Board<a class="anchor-link" href="#College-Board"> </a>
+</h2>
+<p>Unit 8 is worth 7.5-10% of the college board test, so it is not worth a huge amount. However, it is still important to understand how they work and when they can be utilized.</p>
+<h4 id="Learning-Objectives">
+<a class="anchor" href="#Learning-Objectives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives<a class="anchor-link" href="#Learning-Objectives"> </a>
+</h4>
+<ul>
+<li>8.1 2D Arrays<ul>
+<li>Represent collections of related primitive or object reference data using two-dimensional (2D) array objects.</li>
+</ul>
+</li>
+<li>8.2 Traversing 2D Arrays<ul>
+<li>For 2D array objects: <ul>
+<li>a. Traverse using nested for loops. </li>
+<li>b. Traverse using nested enhanced for loops.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating-A-2D-Array">
+<a class="anchor" href="#Creating-A-2D-Array" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating A 2D Array<a class="anchor-link" href="#Creating-A-2D-Array"> </a>
+</h3>
+<p>The first step is to initialize the array. To do this, specify the type, followed by "[][]", followed by the name of the 2D array. 
+Examples:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span><span class="o">[][]</span> <span class="n">numbers</span><span class="p">;</span>
+<span class="n">String</span><span class="o">[][]</span> <span class="n">names</span><span class="p">;</span>
+<span class="kt">char</span><span class="o">[][]</span> <span class="n">letters</span><span class="p">;</span>
+<span class="kt">float</span><span class="o">[][]</span> <span class="n">floats</span><span class="p">;</span>
+<span class="kt">double</span><span class="o">[][]</span> <span class="n">doubles</span><span class="p">;</span>
+<span class="n">Object</span><span class="o">[][]</span> <span class="n">objects</span><span class="p">;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Initializing-a-2D-Array">
+<a class="anchor" href="#Initializing-a-2D-Array" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initializing a 2D Array<a class="anchor-link" href="#Initializing-a-2D-Array"> </a>
+</h3>
+<p>Then you must give it a value, by initializing the 2D array. 
+There are two ways to initialize a 2D array.
+  Method 1: You can initialize the array by giving it values
+  Method 2: You can also initialize it by giving it the size</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span><span class="o">[][]</span> <span class="n">numbers1</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">},{</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">},{</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">},{</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">}};</span><span class="c1">//method 1:</span>
+<span class="kt">int</span><span class="o">[][]</span> <span class="n">numbers2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span> <span class="c1">//method 2: Creates array with four rows and 3 columns </span>
+<span class="n">String</span><span class="o">[][]</span> <span class="n">names1</span> <span class="o">=</span> <span class="p">{{</span><span class="s">"John"</span><span class="p">,</span><span class="s">"James"</span><span class="p">,</span><span class="s">"Jay"</span><span class="p">},{</span><span class="s">"Melissa"</span><span class="p">,</span><span class="s">"May"</span><span class="p">,</span><span class="s">"Maggie"</span><span class="p">},{</span><span class="s">"Bob"</span><span class="p">,</span><span class="s">"Burt"</span><span class="p">,</span><span class="s">"Billy"</span><span class="p">}};</span> <span class="c1">//method 1</span>
+<span class="n">String</span><span class="o">[][]</span> <span class="n">names2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span> <span class="c1">//method2: Creates array with 2 rows and 2 columns</span>
+<span class="kt">char</span><span class="o">[][]</span> <span class="n">letters1</span> <span class="o">=</span> <span class="p">{{</span><span class="sc">'a'</span><span class="p">,</span><span class="sc">'b'</span><span class="p">,</span><span class="sc">'c'</span><span class="p">},{</span><span class="sc">'d'</span><span class="p">,</span><span class="sc">'e'</span><span class="p">,</span><span class="sc">'f'</span><span class="p">,</span><span class="sc">'g'</span><span class="p">,</span><span class="sc">'h'</span><span class="p">}};</span> <span class="c1">//method 1</span>
+<span class="kt">char</span><span class="o">[][]</span> <span class="n">letters2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span> <span class="c1">//method 2: Creates array with 2 rows and 3 columns</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note, that when you initialize a 2D array using method 1, each row can have a different number of columns, ie, each array within the array can have a different number of values.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Iteration">
+<a class="anchor" href="#Iteration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration<a class="anchor-link" href="#Iteration"> </a>
+</h3>
+<p>To iterate through a normal array, you would could use a for loop, as demonstrated below to print the alphabet. You would iterate through the first array(row), then use another for loop nested within the first that iterates through the second arrays(columns).</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">String</span><span class="o">[][]</span> <span class="n">alphabet</span> <span class="o">=</span> <span class="p">{{</span><span class="s">"1"</span><span class="p">,</span> <span class="s">"2"</span><span class="p">,</span> <span class="s">"3"</span><span class="p">,</span> <span class="s">"4"</span><span class="p">,</span> <span class="s">"5"</span><span class="p">,</span> <span class="s">"6"</span><span class="p">,</span> <span class="s">"7"</span><span class="p">,</span> <span class="s">"8"</span><span class="p">,</span> <span class="s">"9"</span><span class="p">,</span> <span class="s">"0"</span><span class="p">,</span> <span class="s">"-"</span><span class="p">,</span> <span class="s">"="</span><span class="p">},</span>
+<span class="p">{</span><span class="s">"q"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">,</span> <span class="s">"t"</span><span class="p">,</span> <span class="s">"y"</span><span class="p">,</span> <span class="s">"u"</span><span class="p">,</span> <span class="s">"i"</span><span class="p">,</span> <span class="s">"o"</span><span class="p">,</span> <span class="s">"p"</span><span class="p">,</span> <span class="s">"["</span><span class="p">,</span> <span class="s">"]"</span><span class="p">,</span> <span class="s">"\\"</span><span class="p">},</span>
+<span class="p">{</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"s"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span> <span class="s">"g"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span> <span class="s">"j"</span><span class="p">,</span> <span class="s">"k"</span><span class="p">,</span> <span class="s">"l"</span><span class="p">},</span>
+<span class="p">{</span><span class="s">"z"</span><span class="p">,</span> <span class="s">"x"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"v"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"n"</span><span class="p">,</span> <span class="s">"m"</span><span class="p">,</span> <span class="s">","</span><span class="p">,</span> <span class="s">"."</span><span class="p">,</span> <span class="s">"/"</span><span class="p">}};</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">alphabet</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">alphabet</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> <span class="c1">//nested for loops</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">alphabet</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]+</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 2 3 4 5 6 7 8 9 0 - =  
+q w e r t y u i o p [ ] \  
+a s d f g h j k l  
+z x c v b n m , . /  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this way, you can print all the values of a certain 2D array.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Accessing-and-Changing-Elements-of-2D-Arrays">
+<a class="anchor" href="#Accessing-and-Changing-Elements-of-2D-Arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessing and Changing Elements of 2D Arrays<a class="anchor-link" href="#Accessing-and-Changing-Elements-of-2D-Arrays"> </a>
+</h3>
+<p>You can change elements or access elements in 2D arrays by using the indexes. For example, to access the 2nd row, and 3 column, use [1][2]</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span><span class="o">[][]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span> <span class="c1">//method 2: Creates array with two rows and two columns</span>
+<span class="n">numbers</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">numbers</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="n">numbers</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+<span class="n">numbers</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">numbers</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> <span class="c1">//nested for loops</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]+</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 4  
+9 16  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Displaying-Contents-of-Array-Vertically-and-Horizontally">
+<a class="anchor" href="#Displaying-Contents-of-Array-Vertically-and-Horizontally" aria-hidden="true"><span class="octicon octicon-link"></span></a>Displaying Contents of Array Vertically and Horizontally<a class="anchor-link" href="#Displaying-Contents-of-Array-Vertically-and-Horizontally"> </a>
+</h3>
+<p>Here, I've created a 2D array with 10 rows and 10 columns. Then, I used nested for loops to initialize values for each value in each row and column to the product of the row and column numbers.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span><span class="o">[][]</span><span class="n">products</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span> <span class="o">[</span><span class="mi">10</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span> <span class="c1">//creating 2D Array</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">products</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> 
+        <span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="p">;</span> <span class="c1">//initializing values for array</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Printing out values in a pattern/grid design:\n"</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">products</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]+</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\nPrinting out values horizontally:\n"</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">products</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]+</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\n\nPrinting out values vertically:\n"</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">products</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]+</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Printing out values in a pattern/grid design:
+
+0 0 0 0 0 0 0 0 0 0  
+0 1 2 3 4 5 6 7 8 9  
+0 2 4 6 8 10 12 14 16 18  
+0 3 6 9 12 15 18 21 24 27  
+0 4 8 12 16 20 24 28 32 36  
+0 5 10 15 20 25 30 35 40 45  
+0 6 12 18 24 30 36 42 48 54  
+0 7 14 21 28 35 42 49 56 63  
+0 8 16 24 32 40 48 56 64 72  
+0 9 18 27 36 45 54 63 72 81  
+
+Printing out values horizontally:
+
+0 0 0 0 0 0 0 0 0 0 0 1 2 3 4 5 6 7 8 9 0 2 4 6 8 10 12 14 16 18 0 3 6 9 12 15 18 21 24 27 0 4 8 12 16 20 24 28 32 36 0 5 10 15 20 25 30 35 40 45 0 6 12 18 24 30 36 42 48 54 0 7 14 21 28 35 42 49 56 63 0 8 16 24 32 40 48 56 64 72 0 9 18 27 36 45 54 63 72 81 
+
+Printing out values vertically:
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+0 
+2 
+4 
+6 
+8 
+10 
+12 
+14 
+16 
+18 
+0 
+3 
+6 
+9 
+12 
+15 
+18 
+21 
+24 
+27 
+0 
+4 
+8 
+12 
+16 
+20 
+24 
+28 
+32 
+36 
+0 
+5 
+10 
+15 
+20 
+25 
+30 
+35 
+40 
+45 
+0 
+6 
+12 
+18 
+24 
+30 
+36 
+42 
+48 
+54 
+0 
+7 
+14 
+21 
+28 
+35 
+42 
+49 
+56 
+63 
+0 
+8 
+16 
+24 
+32 
+40 
+48 
+56 
+64 
+72 
+0 
+9 
+18 
+27 
+36 
+45 
+54 
+63 
+72 
+81 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Displaying-Backwards-and-Upside-Down">
+<a class="anchor" href="#Displaying-Backwards-and-Upside-Down" aria-hidden="true"><span class="octicon octicon-link"></span></a>Displaying Backwards and Upside Down<a class="anchor-link" href="#Displaying-Backwards-and-Upside-Down"> </a>
+</h3>
+<p>Here, I've created a 2D array with 10 rows and 10 columns. Then, I used nested for loops to initialize values for each value in each row and column to the sum of the row and column numbers.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span><span class="o">[][]</span><span class="n">sums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span> <span class="o">[</span><span class="mi">10</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span> <span class="c1">//creating 2D Array</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">sums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">sums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> 
+        <span class="n">sums</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">;</span> <span class="c1">//initializing values for array</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Printing out values forward"</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">products</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]+</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\n\nPrinting out values backward"</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">products</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">--</span><span class="p">){</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]+</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Printing out values forward
+0 0 0 0 0 0 0 0 0 0  
+0 1 2 3 4 5 6 7 8 9  
+0 2 4 6 8 10 12 14 16 18  
+0 3 6 9 12 15 18 21 24 27  
+0 4 8 12 16 20 24 28 32 36  
+0 5 10 15 20 25 30 35 40 45  
+0 6 12 18 24 30 36 42 48 54  
+0 7 14 21 28 35 42 49 56 63  
+0 8 16 24 32 40 48 56 64 72  
+0 9 18 27 36 45 54 63 72 81  
+
+
+Printing out values backward
+81 72 63 54 45 36 27 18 9 0  
+72 64 56 48 40 32 24 16 8 0  
+63 56 49 42 35 28 21 14 7 0  
+54 48 42 36 30 24 18 12 6 0  
+45 40 35 30 25 20 15 10 5 0  
+36 32 28 24 20 16 12 8 4 0  
+27 24 21 18 15 12 9 6 3 0  
+18 16 14 12 10 8 6 4 2 0  
+9 8 7 6 5 4 3 2 1 0  
+0 0 0 0 0 0 0 0 0 0  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span><span class="o">[][]</span><span class="n">sums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span> <span class="o">[</span><span class="mi">10</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span> <span class="c1">//creating 2D Array</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">sums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">sums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> 
+        <span class="n">sums</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">;</span> <span class="c1">//initializing values for array</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Rows forward, columns backward"</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">products</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">--</span><span class="p">){</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]+</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\n\nRows backward, columns forward"</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">products</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span><span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">products</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]+</span><span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Rows forward, columns backward
+0 0 0 0 0 0 0 0 0 0  
+9 8 7 6 5 4 3 2 1 0  
+18 16 14 12 10 8 6 4 2 0  
+27 24 21 18 15 12 9 6 3 0  
+36 32 28 24 20 16 12 8 4 0  
+45 40 35 30 25 20 15 10 5 0  
+54 48 42 36 30 24 18 12 6 0  
+63 56 49 42 35 28 21 14 7 0  
+72 64 56 48 40 32 24 16 8 0  
+81 72 63 54 45 36 27 18 9 0  
+
+
+Rows backward, columns forward
+0 9 18 27 36 45 54 63 72 81  
+0 8 16 24 32 40 48 56 64 72  
+0 7 14 21 28 35 42 49 56 63  
+0 6 12 18 24 30 36 42 48 54  
+0 5 10 15 20 25 30 35 40 45  
+0 4 8 12 16 20 24 28 32 36  
+0 3 6 9 12 15 18 21 24 27  
+0 2 4 6 8 10 12 14 16 18  
+0 1 2 3 4 5 6 7 8 9  
+0 0 0 0 0 0 0 0 0 0  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Kahoot">
+<a class="anchor" href="#Kahoot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kahoot<a class="anchor-link" href="#Kahoot"> </a>
+</h1>
+<p><a href="https://create.kahoot.it/share/java-2d-array/924b6563-29ce-42ca-be33-d337154b1bb2">Link to Kahoot</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Homework">
+<a class="anchor" href="#Homework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Homework<a class="anchor-link" href="#Homework"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Create a class for 2D array learning.</li>
+<li>Create a method too initialize a 2D array with arbitrary values</li>
+<li>Create a method to reverse the 2D array and print out the values</li>
+<li>Create a method that asks for the input of a position and it returns the corresponding value</li>
+<li>Create a method that multiplies each value in a row and then adds all the products together</li>
+<li>Create a new object to test out each method in the main function</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="RohanG326/rohangfastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/rohangfastpages/jupyter/2022/12/06/cbunit8.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/rohangfastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/rohangfastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/rohangfastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

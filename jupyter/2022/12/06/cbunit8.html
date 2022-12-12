@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      12 min read
     
 </span></p>
 
@@ -758,6 +758,157 @@ Rows backward, columns forward
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Homework</span><span class="p">{</span> <span class="c1">// Create a class for 2D array learning.</span>
+   
+    <span class="kd">private</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">adis</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="o">[][]</span> <span class="n">rohans</span><span class="p">;</span> <span class="c1">// reversed 2D array</span>
+
+
+    <span class="kd">public</span> <span class="nf">Homework</span><span class="p">(){</span>
+
+        <span class="n">adis</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">6</span><span class="o">][</span><span class="mi">6</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">rohans</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">6</span><span class="o">][</span><span class="mi">6</span><span class="o">]</span><span class="p">;</span>  <span class="c1">// Initialize a 2D array with arbitrary values</span>
+
+    <span class="p">}</span>
+
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">(){</span> <span class="c1">// Initialize a 2D array and set arbitrary values</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">adis</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">adis</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+
+                <span class="n">adis</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="mi">100</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> 
+            <span class="p">}</span>
+
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">temp</span><span class="p">){</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">temp</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">temp</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">temp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span> 
+            <span class="p">}</span>
+            
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span> 
+
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">reverse</span><span class="p">(){</span> <span class="c1">// Create a method to reverse the 2D array and print out the values</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">adis</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">adis</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+
+                <span class="n">rohans</span><span class="o">[</span><span class="n">adis</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="o">][</span><span class="n">adis</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">adis</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+
+            <span class="p">}</span>
+
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">inputIndex</span><span class="p">(){</span>  <span class="c1">// Create a method that asks for the input of a position and it returns the corresponding value</span>
+
+        <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Row 1 - 5: "</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Column 1 - 5: "</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="s">"Value:"</span> <span class="o">+</span> <span class="n">adis</span><span class="o">[</span><span class="n">num1</span><span class="o">][</span><span class="n">num2</span><span class="o">]</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">productSum</span><span class="p">(){</span> <span class="c1">// Create a method that multiplies each value in a row and then adds all the products together</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">adis</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">adis</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">n</span> <span class="o">*=</span> <span class="n">adis</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">n</span><span class="p">;</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Product Sum: "</span> <span class="o">+</span> <span class="n">sum</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Create a new object to test out each method in the main function</span>
+        <span class="n">Homework</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Homework</span><span class="p">();</span>
+        <span class="n">b</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Original Array"</span><span class="p">);</span>
+        <span class="n">b</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="na">adis</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+        <span class="n">b</span><span class="p">.</span><span class="na">reverse</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Reversed Array"</span><span class="p">);</span>
+        <span class="n">b</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="na">rohans</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="na">inputIndex</span><span class="p">());</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="n">b</span><span class="p">.</span><span class="na">productSum</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Homework</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original Array
+70 62 35 15 18 62 
+38 72 43 46 26 8 
+21 82 48 74 30 23 
+85 44 29 30 83 85 
+47 60 17 25 35 97 
+13 53 3 66 34 32 
+ 
+Reversed Array
+32 34 66 3 53 13 
+97 35 25 17 60 47 
+85 83 30 29 44 85 
+23 30 74 48 82 21 
+8 26 46 43 72 38 
+62 18 15 35 62 70 
+
+Row 1 - 5: 
+Column 1 - 5: 
+Value:44
+
+Product Sum: 702032692
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Rohan G CollegeBoard Unit 9 Inheritance | Rohan G APCSA</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Rohan G CollegeBoard Unit 9 Inheritance" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Week 16 Unit 9 Inheritance Lesson and Homework" />
+<meta property="og:description" content="Week 16 Unit 9 Inheritance Lesson and Homework" />
+<link rel="canonical" href="https://rohang326.github.io/rohangfastpages/jupyter/2022/12/12/cbunit9.html" />
+<meta property="og:url" content="https://rohang326.github.io/rohangfastpages/jupyter/2022/12/12/cbunit9.html" />
+<meta property="og:site_name" content="Rohan G APCSA" />
+<meta property="og:image" content="https://rohang326.github.io/rohangfastpages/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-12T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://rohang326.github.io/rohangfastpages/images/chart-preview.png" />
+<meta property="twitter:title" content="Rohan G CollegeBoard Unit 9 Inheritance" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-12T00:00:00-06:00","datePublished":"2022-12-12T00:00:00-06:00","description":"Week 16 Unit 9 Inheritance Lesson and Homework","headline":"Rohan G CollegeBoard Unit 9 Inheritance","image":"https://rohang326.github.io/rohangfastpages/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohang326.github.io/rohangfastpages/jupyter/2022/12/12/cbunit9.html"},"url":"https://rohang326.github.io/rohangfastpages/jupyter/2022/12/12/cbunit9.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/rohangfastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohang326.github.io/rohangfastpages/feed.xml" title="Rohan G APCSA" /><link rel="shortcut icon" type="image/x-icon" href="/rohangfastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/rohangfastpages/">Rohan G APCSA</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/rohangfastpages/search/">Search</a><a class="page-link" href="/rohangfastpages/about/">About Me</a><a class="page-link" href="/rohangfastpages/notes/">Notes</a><a class="page-link" href="/rohangfastpages/pbl/">PBL</a><a class="page-link" href="/rohangfastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Rohan G CollegeBoard Unit 9 Inheritance</h1><p class="page-description">Week 16 Unit 9 Inheritance Lesson and Homework</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-12T00:00:00-06:00" itemprop="datePublished">
+        Dec 12, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/rohangfastpages/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/RohanG326/rohangfastpages/tree/master/_notebooks/2022-12-12-cbunit9.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/rohangfastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/RohanG326/rohangfastpages/master?filepath=_notebooks%2F2022-12-12-cbunit9.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/RohanG326/rohangfastpages/blob/master/_notebooks/2022-12-12-cbunit9.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FRohanG326%2Frohangfastpages%2Fblob%2Fmaster%2F_notebooks%2F2022-12-12-cbunit9.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/rohangfastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Part-1">Part 1 </a></li>
+<li class="toc-entry toc-h2"><a href="#Part-2">Part 2 </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-12-12-cbunit9.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://docs.google.com/presentation/d/1h9C3YOOpqIJkk68dA-m1fc2a5CVhoa3Rur7uEenqHBY/edit#slide=id.gc6f919934_0_0">Link to their presentation</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-1">
+<a class="anchor" href="#Part-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part 1<a class="anchor-link" href="#Part-1"> </a>
+</h2>
+<ul>
+<li>Create a world cup superclass with properties of your choice and subclasses for five teams which inherits those properties</li>
+<li>Write a constructor for one of those subclasses</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WorldCup</span> <span class="p">{</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">country</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">bestplayer</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">WorldCup</span> <span class="p">(</span><span class="n">String</span> <span class="n">country</span><span class="p">,</span> <span class="n">String</span> <span class="n">bestplayer</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">country</span> <span class="o">=</span> <span class="n">country</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">bestplayer</span> <span class="o">=</span> <span class="n">bestplayer</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getCountry</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">country</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getBestPlayer</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">bestplayer</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="s">"WorldCup (country: "</span> <span class="o">+</span> <span class="n">country</span> <span class="o">+</span> <span class="s">", bestplayer: "</span> <span class="o">+</span> <span class="n">bestplayer</span> <span class="o">+</span> <span class="s">")"</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">WorldCup</span> <span class="n">Qatar</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WorldCup</span><span class="p">(</span><span class="s">"Qatar"</span><span class="p">,</span> <span class="s">"who knows"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Qatar</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Morocco</span> <span class="kd">extends</span> <span class="n">WorldCup</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">goalsscored</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">goalsagainst</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Morocco</span> <span class="p">(</span><span class="n">String</span> <span class="n">country</span><span class="p">,</span> <span class="n">String</span> <span class="n">bestplayer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goalsscored</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goalsagainst</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">bestplayer</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">goalsscored</span> <span class="o">=</span> <span class="n">goalsscored</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">goalsagainst</span> <span class="o">=</span> <span class="n">goalsagainst</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getgoalsscored</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">goalsscored</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getgoalsagainst</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">goalsagainst</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="s">"WorldCup (country: "</span> <span class="o">+</span> <span class="n">country</span> <span class="o">+</span> <span class="s">", bestplayer: "</span> <span class="o">+</span> <span class="n">bestplayer</span> <span class="o">+</span> <span class="s">", Goals Scored: "</span> <span class="o">+</span> <span class="n">goalsscored</span> <span class="o">+</span> <span class="s">", Goals Against: "</span> <span class="o">+</span> <span class="n">goalsagainst</span> <span class="o">+</span> <span class="s">")"</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">WorldCup</span> <span class="n">Morocco1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Morocco</span><span class="p">(</span><span class="s">"Morocco"</span><span class="p">,</span> <span class="s">"En-Nesyri"</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Morocco1</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Croatia</span> <span class="kd">extends</span> <span class="n">WorldCup</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">goalsscored</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">goalsagainst</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">Croatia</span> <span class="p">(</span><span class="n">String</span> <span class="n">country</span><span class="p">,</span> <span class="n">String</span> <span class="n">bestplayer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goalsscored</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goalsagainst</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">bestplayer</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">goalsscored</span> <span class="o">=</span> <span class="n">goalsscored</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">goalsagainst</span> <span class="o">=</span> <span class="n">goalsagainst</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getCroatiaScored</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">goalsscored</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getgoalsagainst</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">goalsagainst</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="s">"WorldCup (country: "</span> <span class="o">+</span> <span class="n">country</span> <span class="o">+</span> <span class="s">", bestplayer: "</span> <span class="o">+</span> <span class="n">bestplayer</span> <span class="o">+</span> <span class="s">", Goals Scored: "</span> <span class="o">+</span> <span class="n">goalsscored</span> <span class="o">+</span> <span class="s">", Goals Against: "</span> <span class="o">+</span> <span class="n">goalsagainst</span> <span class="o">+</span> <span class="s">")"</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">WorldCup</span> <span class="n">Croatia1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Croatia</span><span class="p">(</span><span class="s">"Croatia"</span><span class="p">,</span> <span class="s">"Modric"</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Croatia1</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">France</span> <span class="kd">extends</span> <span class="n">WorldCup</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">goalsscored</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">goalsagainst</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">France</span> <span class="p">(</span><span class="n">String</span> <span class="n">country</span><span class="p">,</span> <span class="n">String</span> <span class="n">bestplayer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goalsscored</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goalsagainst</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">bestplayer</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">goalsscored</span> <span class="o">=</span> <span class="n">goalsscored</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">goalsagainst</span> <span class="o">=</span> <span class="n">goalsagainst</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getFranceScored</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">goalsscored</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getgoalsagainst</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">goalsagainst</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="s">"WorldCup (country: "</span> <span class="o">+</span> <span class="n">country</span> <span class="o">+</span> <span class="s">", bestplayer: "</span> <span class="o">+</span> <span class="n">bestplayer</span> <span class="o">+</span> <span class="s">", Goals Scored: "</span> <span class="o">+</span> <span class="n">goalsscored</span> <span class="o">+</span> <span class="s">", Goals Against: "</span> <span class="o">+</span> <span class="n">goalsagainst</span> <span class="o">+</span> <span class="s">")"</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">WorldCup</span> <span class="n">France1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">France</span><span class="p">(</span><span class="s">"France"</span><span class="p">,</span> <span class="s">"Mbappe"</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">France1</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Argentina</span> <span class="kd">extends</span> <span class="n">WorldCup</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">goalsscored</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">goalsagainst</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">Argentina</span> <span class="p">(</span><span class="n">String</span> <span class="n">country</span><span class="p">,</span> <span class="n">String</span> <span class="n">bestplayer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goalsscored</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goalsagainst</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">bestplayer</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">goalsscored</span> <span class="o">=</span> <span class="n">goalsscored</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">goalsagainst</span> <span class="o">=</span> <span class="n">goalsagainst</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getArgentinaScored</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">goalsscored</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getgoalsagainst</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">goalsagainst</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="s">"WorldCup (country: "</span> <span class="o">+</span> <span class="n">country</span> <span class="o">+</span> <span class="s">", bestplayer: "</span> <span class="o">+</span> <span class="n">bestplayer</span> <span class="o">+</span> <span class="s">", Goals Scored: "</span> <span class="o">+</span> <span class="n">goalsscored</span> <span class="o">+</span> <span class="s">", Goals Against: "</span> <span class="o">+</span> <span class="n">goalsagainst</span> <span class="o">+</span> <span class="s">")"</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">WorldCup</span> <span class="n">Argentina1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Argentina</span><span class="p">(</span><span class="s">"Argentina"</span><span class="p">,</span> <span class="s">"Messi"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Argentina1</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">WorldCup</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">Morocco</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">France</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">Croatia</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">Argentina</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>WorldCup (country: Qatar, bestplayer: who knows)
+WorldCup (country: Morocco, bestplayer: En-Nesyri, Goals Scored: 6, Goals Against: 0)
+WorldCup (country: France, bestplayer: Mbappe, Goals Scored: 13, Goals Against: 6)
+WorldCup (country: Croatia, bestplayer: Modric, Goals Scored: 8, Goals Against: 2)
+WorldCup (country: Argentina, bestplayer: Messi, Goals Scored: 10, Goals Against: 5)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-2">
+<a class="anchor" href="#Part-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part 2<a class="anchor-link" href="#Part-2"> </a>
+</h2>
+<ul>
+<li>Add a getAge method in the Person super class</li>
+<li>Create a new subclass Student with additional members of your choice to personalize the Student class</li>
+<li>Create a new subclass Teacher with additiona members of your choice</li>
+<li>Override the toString method using the @Override to print a Student and teacher object with new members</li>
+<li>Print the student and teacher.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+ 
+    <span class="kd">public</span> <span class="nf">Person</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">){</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">(){</span>
+       <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getBirthday</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="n">birthday</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">age</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+ 
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">;</span>
+ 
+    <span class="kd">public</span> <span class="nf">Student</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">)</span> <span class="p">{</span>
+       <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">,</span> <span class="n">age</span><span class="p">);</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">grade</span> <span class="o">=</span> <span class="n">grade</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">gpa</span> <span class="o">=</span> <span class="n">gpa</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getGrade</span><span class="p">(){</span>
+       <span class="k">return</span> <span class="n">grade</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getGPA</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="n">gpa</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="s">"Person (name: "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">", grade: "</span> <span class="o">+</span> <span class="n">grade</span> <span class="o">+</span> <span class="s">", birthday: "</span> <span class="o">+</span> <span class="n">birthday</span> <span class="o">+</span> <span class="s">", Age: "</span> <span class="o">+</span> <span class="n">age</span> <span class="o">+</span> <span class="s">", GPA: "</span> <span class="o">+</span> <span class="n">gpa</span> <span class="o">+</span> <span class="s">")"</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">classtaught</span><span class="p">;</span>
+   <span class="kd">private</span> <span class="kt">int</span> <span class="n">yearsteaching</span><span class="p">;</span>
+
+   <span class="kd">public</span> <span class="nf">Teacher</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="n">String</span> <span class="n">classtaught</span><span class="p">,</span> <span class="kt">int</span> <span class="n">yearsteaching</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">,</span> <span class="n">age</span><span class="p">);</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">classtaught</span> <span class="o">=</span> <span class="n">classtaught</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">yearsteaching</span> <span class="o">=</span> <span class="n">yearsteaching</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="kd">public</span> <span class="n">String</span> <span class="nf">getClassTaught</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="n">classtaught</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getYearsTeaching</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="n">yearsteaching</span><span class="p">;</span>
+   <span class="p">}</span>
+
+
+   <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="s">"Person (name: "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">", Class Taught: "</span> <span class="o">+</span> <span class="n">classtaught</span> <span class="o">+</span> <span class="s">", birthday: "</span> <span class="o">+</span> <span class="n">birthday</span> <span class="o">+</span> <span class="s">", Age: "</span> <span class="o">+</span> <span class="n">age</span> <span class="o">+</span> <span class="s">", Years Teaching: "</span> <span class="o">+</span> <span class="n">yearsteaching</span> <span class="o">+</span> <span class="s">")"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Person</span> <span class="n">John</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Teacher</span><span class="p">(</span><span class="s">"John Mortensen"</span><span class="p">,</span> <span class="s">"idk"</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="s">"Computer Science"</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">John</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="n">Person</span> <span class="n">Rohan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="p">(</span><span class="s">"Rohan Gaiks"</span><span class="p">,</span> <span class="s">"March 2"</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Rohan</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Rohan</span><span class="p">.</span><span class="na">getAge</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Person (name: John Mortensen, Class Taught: Computer Science, birthday: idk, Age: 65, Years Teaching: 5)
+Person (name: Rohan Gaiks, grade: 11, birthday: March 2, Age: 16, GPA: 4.0)
+16
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="RohanG326/rohangfastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/rohangfastpages/jupyter/2022/12/12/cbunit9.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/rohangfastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/rohangfastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/rohangfastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

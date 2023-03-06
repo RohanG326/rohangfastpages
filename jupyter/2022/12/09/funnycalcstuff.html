@@ -7,7 +7,7 @@
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -69,22 +69,58 @@
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>  
-<span class="kd">class</span> <span class="nc">Euler</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">coordinate</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//coordinate multiplication</span>
+<span class="kn">import</span> <span class="nn">java.math.*</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Euler</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">diffy</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">diffx</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="n">initialx</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="n">initialy</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="n">finalx</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">increment</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="n">derivative</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="n">deltax</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="n">deltay</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">wholethingig</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  <span class="c1">// Create a Scanner object</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"what is the coefficient of y in dy/dx = x + y"</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">diffy</span> <span class="o">=</span> <span class="n">in</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>  <span class="c1">// Read user input</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"what is coefficient of x in dy/dx = x + y"</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">diffx</span> <span class="o">=</span> <span class="n">in</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>  <span class="c1">// Read user input</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"what is the starting x coordinate"</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">initialx</span> <span class="o">=</span> <span class="n">in</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>  <span class="c1">// Read user input</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"what is the starting y coordinate"</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">initialy</span> <span class="o">=</span> <span class="n">in</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>  <span class="c1">// Read user input</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"what is the final x coordinate"</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">finalx</span> <span class="o">=</span> <span class="n">in</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>  <span class="c1">// Read user input</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"how many increments"</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">increment</span> <span class="o">=</span> <span class="n">in</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Equation is: dy/dx = "</span> <span class="o">+</span> <span class="n">diffx</span> <span class="o">+</span> <span class="s">"x"</span>  <span class="o">+</span> <span class="s">" + "</span> <span class="o">+</span> <span class="n">diffy</span> <span class="o">+</span> <span class="s">"y"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Starting coordinate = "</span> <span class="o">+</span> <span class="s">"("</span> <span class="o">+</span> <span class="n">initialx</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="n">initialy</span> <span class="o">+</span> <span class="s">")"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">increment</span> <span class="o">+</span> <span class="s">" increments to get to f("</span> <span class="o">+</span> <span class="n">finalx</span> <span class="o">+</span> <span class="s">")"</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">deltax</span> <span class="o">=</span> <span class="p">(</span><span class="n">finalx</span> <span class="o">-</span> <span class="n">initialx</span><span class="p">)</span><span class="o">/</span><span class="n">increment</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">deltax</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">increment</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="kt">double</span> <span class="n">derivative</span> <span class="o">=</span> <span class="p">(</span><span class="n">initialx</span> <span class="o">*</span> <span class="n">diffx</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">initialy</span> <span class="o">*</span> <span class="n">diffy</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">deltay</span> <span class="o">=</span> <span class="n">derivative</span> <span class="o">*</span> <span class="n">deltax</span><span class="p">;</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"(x,y) = "</span> <span class="o">+</span> <span class="s">"("</span> <span class="o">+</span> <span class="n">initialx</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="n">initialy</span> <span class="o">+</span> <span class="s">")   |   "</span> <span class="o">+</span> <span class="s">"Delta x = "</span> <span class="o">+</span> <span class="n">deltax</span> <span class="o">+</span> <span class="s">"   |   "</span> <span class="o">+</span> <span class="s">"dy/dx = "</span> <span class="o">+</span> <span class="n">derivative</span> <span class="o">+</span> <span class="s">"   |   "</span> <span class="o">+</span> <span class="s">"deltax * (dy/dx) = "</span> <span class="o">+</span> <span class="n">deltay</span> <span class="o">+</span> <span class="s">"   |   "</span> <span class="o">+</span> <span class="s">"delta x(dy/dx) = "</span> <span class="o">+</span> <span class="n">deltay</span> <span class="o">+</span> <span class="s">"   |   "</span> <span class="o">+</span> <span class="s">"((x + dx), (y + dy))"</span> <span class="o">+</span> <span class="s">" = ("</span> <span class="o">+</span> <span class="n">initialx</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="n">initialy</span> <span class="o">+</span> <span class="s">")"</span><span class="p">);</span> 
+            <span class="c1">// System.out.println("Delta x = " + deltax + ".");</span>
+            <span class="c1">// System.out.println("dy/dx = " + derivative + ".");</span>
+            <span class="c1">// System.out.println("delta x(dy/dx) = " + deltay + ".");</span>
+            <span class="c1">// System.out.println("((x + dx), (y + dy))" + " = (" + initialx + ", " + initialy + ")");</span>
+            <span class="c1">// System.out.println(deltax);</span>
+            <span class="n">initialy</span> <span class="o">=</span> <span class="n">initialy</span> <span class="o">+</span> <span class="n">deltay</span><span class="p">;</span>
+            <span class="n">initialx</span> <span class="o">=</span> <span class="n">initialx</span> <span class="o">+</span> <span class="n">deltax</span><span class="p">;</span> 
+            <span class="c1">// System.out.println("diffx = " + diffx);</span>
+            <span class="c1">// System.out.println("diffy = " + diffy);</span>
+            <span class="c1">// System.out.println("derivative = " + derivative);</span>
+            <span class="c1">// System.out.println("finalx = " + initialx);</span>
+        <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Final approximation using Euler's method: ("</span> <span class="o">+</span> <span class="n">initialx</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="n">initialy</span> <span class="o">+</span> <span class="s">")"</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  <span class="c1">// Create a Scanner object</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"what is the coefficient of y in dy/dx"</span><span class="p">);</span>
-        <span class="kt">int</span> <span class="n">diffy</span> <span class="o">=</span> <span class="n">in</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>  <span class="c1">// Read user input</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"what is coefficient of x in dy/dx"</span><span class="p">);</span>
-        <span class="kt">int</span> <span class="n">diffx</span> <span class="o">=</span> <span class="n">in</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>  <span class="c1">// Read user input</span>
-        <span class="c1">// System.out.println("what is the starting x coordinate");</span>
-        <span class="c1">// int initialx = in.nextInt();  // Read user input</span>
-        <span class="c1">// System.out.println("what is the starting y coordinate");</span>
-        <span class="c1">// int initialy = in.nextInt();  // Read user input</span>
-        <span class="c1">// System.out.println("what is the deltax");</span>
-        <span class="c1">// double deltax = in.nextDouble();  // Read user input</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dy/dx = "</span> <span class="o">+</span> <span class="n">diffx</span> <span class="o">+</span> <span class="s">"x"</span>  <span class="o">+</span> <span class="s">" + "</span> <span class="o">+</span> <span class="n">diffy</span> <span class="o">+</span> <span class="s">"y"</span><span class="p">);</span>
+        <span class="n">wholethingig</span><span class="p">();</span>
+        <span class="c1">// getDeltaX();</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">Euler</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -100,9 +136,20 @@
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>what is the coefficient of y in dy/dx
-what is coefficient of x in dy/dx
-dy/dx = 1x + -1y
+<pre>what is the coefficient of y in dy/dx = x + y
+what is coefficient of x in dy/dx = x + y
+what is the starting x coordinate
+what is the starting y coordinate
+what is the final x coordinate
+how many increments
+Equation is: dy/dx = 1x + -2y
+Starting coordinate = (2.0, 1.0)
+3 increments to get to f(1.7)
+-0.10000000000000002
+(x,y) = (2.0, 1.0)   |   Delta x = -0.10000000000000002   |   dy/dx = 0.0   |   deltax * (dy/dx) = -0.0   |   delta x(dy/dx) = -0.0   |   ((x + dx), (y + dy)) = (2.0, 1.0)
+(x,y) = (1.9, 1.0)   |   Delta x = -0.10000000000000002   |   dy/dx = -0.10000000000000009   |   deltax * (dy/dx) = 0.01000000000000001   |   delta x(dy/dx) = 0.01000000000000001   |   ((x + dx), (y + dy)) = (1.9, 1.0)
+(x,y) = (1.7999999999999998, 1.01)   |   Delta x = -0.10000000000000002   |   dy/dx = -0.2200000000000002   |   deltax * (dy/dx) = 0.022000000000000023   |   delta x(dy/dx) = 0.022000000000000023   |   ((x + dx), (y + dy)) = (1.7999999999999998, 1.01)
+Final approximation using Euler's method: (1.6999999999999997, 1.032)
 </pre>
 </div>
 </div>

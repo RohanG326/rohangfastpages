@@ -4,6 +4,7 @@ layout: post
 description: Trimester 2 Extra Cred
 categories: [markdown]
 title: Rohan Gaikwad Cal State San Marcos Presentation
+image: /images/IMG_7563.jpg
 ---
 
 # Notes
@@ -16,4 +17,8 @@ title: Rohan Gaikwad Cal State San Marcos Presentation
 - Lots of research opportunities in STEM
 - To pay for college, grants are government funded and scholarships are privatized
 - Financial aid is very helpful at CSUSM --> subsidized loans are given to you
-- 
+- CSUSM Cougar Blue Day to gauge interest in CSUSM
+
+
+## STEM Exploration
+- Made a toothbrush vibrate with a battery making a small circuit

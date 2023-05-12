@@ -1,9 +1,14 @@
 ---
-layout: default
-search_exclude: true
-image: images/logo.png
+layout: home
 ---
 
 <h1>Yo Yo Yo It's Rohan Gaikwad Yo in another year of AP CS</h1>
 
 <h2>Posts</h2>
+
+{% for post in paginator.posts %}
+    {% include post-grid.html %}
+{% endfor %}
+
+{% include paginator.html %}
+

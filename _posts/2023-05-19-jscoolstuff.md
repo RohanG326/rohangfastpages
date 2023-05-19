@@ -79,14 +79,17 @@ image: images/logo.png
         <p style="text-align: center; font-size: 40px;color: red;" id="answer"></p>
         <p style="text-align: center; font-size: 40px;color: red;" id="score"></p>
         <p style="text-align: center; font-size: 40px;color: red;" id="correct"></p>
-        </br>
-        </br>
-        </br>
+        <br>
+        <br>
+        <br>
         <div class="container" style = "position: absolute; font-size: 40px; color: red; left: 600px">
             <label for="question">Enter your own question</label>
             <br>
             <input id="question" type="text"/>
+            <br>
             <input id="answer" type="text"/>
+            <br>
             <input id="points" type="number"/>
-            <button onclick="addQs(document.getElementByID('question').value, document.getElementByID('answer').value, document.getElementByID('points').value)">Submit</button>
+            <button onclick="addQs(document.getElementById('question').value, document.getElementById('answer').value, document.getElementById('points').value)">Submit</button>
+        
 </html>

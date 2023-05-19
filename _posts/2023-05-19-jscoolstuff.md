@@ -59,8 +59,8 @@ image: images/logo.png
                 }
                 }
         }
-        function addQs(question, answer, points) {
-            let newquestion = new Jeopardy(question, answer, points);
+        function addQs(question, answer1, points) {
+            let newquestion = new Jeopardy(question, answer1, points);
             qarray.push(newquestion);
             console.log(qarray);
         }
@@ -89,10 +89,10 @@ image: images/logo.png
             <br>
             <input id="question" type="text"/>
             <br>
-            <input id="answer" type="text"/>
+            <input id="answer1" type="text"/>
             <br>
             <input id="points" type="number"/>
-            <button onclick="addQs(document.getElementById('question').value, document.getElementById('answer').value, document.getElementById('points').value)">Submit</button>
+            <button onclick="addQs(document.getElementById('question').value, document.getElementById('answer1').value, document.getElementById('points').value)">Submit</button>
         
 
 

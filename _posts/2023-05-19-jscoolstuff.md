@@ -60,7 +60,7 @@ image: images/logo.png
         }
         function addQs(question, answer, points) {
             let newquestion = new Jeopardy(question, answer, points);
-            qarray.append(newquestion);
+            qarray.push(newquestion);
         }
     </script>
 <html>

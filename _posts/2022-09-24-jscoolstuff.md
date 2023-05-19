@@ -19,7 +19,7 @@ image: images/logo.png
                 this.point = point;
             }
             CheckAnswer(guess) {
-                return guess === this.answer
+                return guess.toUpperCase() === this.answer.toUpperCase();
             }
         }
         let q1 = new Jeopardy('What is the capital of Chile?', 'Santiago', 2);
@@ -28,8 +28,8 @@ image: images/logo.png
         let q4 = new Jeopardy('What is the capital of Portugal?', 'Lisbon', 2);
         let q5 = new Jeopardy('What is the capital of Ethiopia?', 'Addis Ababa', 2);
         let q6 = new Jeopardy('Who is the President of the United States?', 'Joe Biden', 1);
-        let q7 = new Jeopardy('Who is the leader of Russia?', 'Vladimir Putin', 1);
-        let q8 = new Jeopardy('What is the capital of the United States?', 'Washington DC', 1);
+        let q7 = new Jeopardy('Who is the leader of Russia? (Full Name)', 'Vladimir Putin', 1);
+        let q8 = new Jeopardy('What is the capital of the United States? (No punctuation)', 'Washington DC', 1);
         let q9 = new Jeopardy('What country is being invaded by Russia?', 'Ukraine', 2);
     
             const qarray = [q1, q2, q3, q4, q5, q6, q7, q8, q9]
@@ -58,6 +58,10 @@ image: images/logo.png
                 }
                 }
         }
+        function addQs(question, answer, points) {
+            let newquestion = new Jeopardy(question, answer, points);
+            qarray.append(newquestion);
+        }
     </script>
 <html>
         <div class="container" style="position: absolute; font-size: 40px;color: red; left: 600px">
@@ -75,4 +79,14 @@ image: images/logo.png
         <p style="text-align: center; font-size: 40px;color: red;" id="answer"></p>
         <p style="text-align: center; font-size: 40px;color: red;" id="score"></p>
         <p style="text-align: center; font-size: 40px;color: red;" id="correct"></p>
+        </br>
+        </br>
+        </br>
+        <div class="container" style = "position: absolute; font-size: 40px; color: red; left: 600px">
+            <label for="question">Enter your own question</label>
+            <br>
+            <input id="question" type="text"/>
+            <input id="answer" type="text"/>
+            <input id="points" type="number"/>
+            <button onclick="addQs(document.getElementByID('question').value, document.getElementByID('answer').value, document.getElementByID('points').value)">Submit</button>
 </html>

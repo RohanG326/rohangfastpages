@@ -19,7 +19,8 @@ image: images/logo.png
                 this.point = point;
             }
             CheckAnswer(guess) {
-                return (guess.toUpperCase() === (this.answer).toUpperCase());
+                answerfr = this.answer;
+                return (guess.toUpperCase() === (answerfr).toUpperCase());
             }
         }
         let q1 = new Jeopardy('What is the capital of Chile?', 'Santiago', 2);

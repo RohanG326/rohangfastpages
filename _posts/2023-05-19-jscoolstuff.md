@@ -55,7 +55,7 @@ image: images/logo.png
                 else {
                     document.getElementById('answer').innerHTML = "Nice Try!";
                     document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
-                    document.getElementById('correct').innerHTML = "Sorry, you have gotten " + correct + " questions correct out of " + count;
+                    document.getElementById('correct').innerHTML = "Sorry, you have gotten " + correct + " questions correct out of " + number;
                 }
                 }
         }

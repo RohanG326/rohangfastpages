@@ -19,7 +19,7 @@ image: images/logo.png
                 this.point = point;
             }
             CheckAnswer(guess) {
-                return guess.toUpperCase() === (this.answer).toUpperCase();
+                return (guess.toUpperCase() === (this.answer).toUpperCase());
             }
         }
         let q1 = new Jeopardy('What is the capital of Chile?', 'Santiago', 2);
@@ -61,6 +61,7 @@ image: images/logo.png
         function addQs(question, answer, points) {
             let newquestion = new Jeopardy(question, answer, points);
             qarray.push(newquestion);
+            console.log(qarray);
         }
     </script>
 <html>
@@ -92,4 +93,42 @@ image: images/logo.png
             <input id="points" type="number"/>
             <button onclick="addQs(document.getElementById('question').value, document.getElementById('answer').value, document.getElementById('points').value)">Submit</button>
         
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

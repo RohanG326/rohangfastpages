@@ -87,7 +87,7 @@ window.onload = wrap_img;
                 this.point = point;
             }
             CheckAnswer(guess) {
-                answerfr = this.answer;
+                let answerfr = this.answer;
                 return (guess.toUpperCase() === (answerfr).toUpperCase());
             }
         }
@@ -118,12 +118,12 @@ window.onload = wrap_img;
                     correct = correct + 1
                     document.getElementById('answer').innerHTML = "Well Done!";
                     document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
-                    document.getElementById('correct').innerHTML = "You got " + correct + " questions correct out of " + count;
+                    document.getElementById('correct').innerHTML = "You got " + correct + " questions correct out of " + number;
                 }
                 else {
                     document.getElementById('answer').innerHTML = "Nice Try!";
                     document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
-                    document.getElementById('correct').innerHTML = "Sorry, you have gotten " + correct + " questions correct out of " + count;
+                    document.getElementById('correct').innerHTML = "Sorry, you have gotten " + correct + " questions correct out of " + number;
                 }
                 }
         }

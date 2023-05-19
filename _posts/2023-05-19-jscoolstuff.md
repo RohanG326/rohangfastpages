@@ -19,7 +19,7 @@ image: images/logo.png
                 this.point = point;
             }
             CheckAnswer(guess) {
-                answerfr = this.answer;
+                let answerfr = this.answer;
                 return (guess.toUpperCase() === (answerfr).toUpperCase());
             }
         }
@@ -50,7 +50,7 @@ image: images/logo.png
                     correct = correct + 1
                     document.getElementById('answer').innerHTML = "Well Done!";
                     document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
-                    document.getElementById('correct').innerHTML = "You got " + correct + " questions correct out of " + count;
+                    document.getElementById('correct').innerHTML = "You got " + correct + " questions correct out of " + number;
                 }
                 else {
                     document.getElementById('answer').innerHTML = "Nice Try!";

@@ -7,7 +7,7 @@ image: images/logo.png
 # Yo Yo Yo It's Rohan Gaikwad Yo in another year of AP CS
 
 # Posts
-  <style>
+  <!-- <style>
     .container {
       position: absolute;
       left: 50%;
@@ -52,7 +52,7 @@ image: images/logo.png
       color: red;
       margin-bottom: 20px;
     }
-  </style>
+  </style> -->
 <script>
         let score = 0
         let total = 0
@@ -109,7 +109,7 @@ image: images/logo.png
                 }
         }
         function addQs(question, answer1, points) {
-            let newquestion = new Jeopardy(question, answer1, points);
+            let newquestion = new Jeopardy(question, answer1, parseInt(points));
             qarray.push(newquestion);
             console.log(qarray);
         }

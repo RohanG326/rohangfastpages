@@ -53,12 +53,12 @@ image: images/logo.png
                     correct = correct + 1
                     document.getElementById('answer').innerHTML = "Well Done!";
                     document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
-                    document.getElementById('correct').innerHTML = "You got " + correct + " questions correct out of " + number;
+                    document.getElementById('correct').innerHTML = "You got " + correct + " questions correct out of " + count;
                 }
                 else {
                     document.getElementById('answer').innerHTML = "Nice Try!";
                     document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
-                    document.getElementById('correct').innerHTML = "Sorry, you have gotten " + correct + " questions correct out of " + number;
+                    document.getElementById('correct').innerHTML = "Sorry, you have gotten " + correct + " questions correct out of " + count;
                 }
                 }
         }

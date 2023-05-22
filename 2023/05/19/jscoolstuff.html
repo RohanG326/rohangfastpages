@@ -75,53 +75,7 @@ window.onload = wrap_img;
         <h1 id="yo-yo-yo-its-rohan-gaikwad-yo-in-another-year-of-ap-cs">Yo Yo Yo It’s Rohan Gaikwad Yo in another year of AP CS</h1>
 
 <h1 id="posts">Posts</h1>
-<p>&lt;!– <style>
-    .container {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      font-size: 24px;
-      color: red;
-    }</style></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.container label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.container input[type="number"] {
-  width: 100px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-.container input[type="text"] {
-  width: 300px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-.container button {
-  padding: 8px 16px;
-  background-color: red;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.container button:hover {
-  background-color: darkred;
-}
-
-.result {
-  font-size: 24px;
-  color: red;
-  margin-bottom: 20px;
-}
-</code></pre></div></div>
-<p>&lt;/style&gt; –&gt;
 <script>
         let score = 0
         let total = 0
@@ -146,44 +100,44 @@ window.onload = wrap_img;
         let q6 = new Jeopardy('Who is the President of the United States?', 'Joe Biden', 1);
         let q7 = new Jeopardy('Who is the leader of Russia? (Full Name)', 'Vladimir Putin', 1);
         let q8 = new Jeopardy('What is the capital of the United States? (No punctuation)', 'Washington DC', 1);
-        let q9 = new Jeopardy('What country is being invaded by Russia?', 'Ukraine', 2);</script></p>
+        let q9 = new Jeopardy('What country is being invaded by Russia?', 'Ukraine', 2);
+    
+            const qarray = [q1, q2, q3, q4, q5, q6, q7, q8, q9]
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        const qarray = [q1, q2, q3, q4, q5, q6, q7, q8, q9]
-
-    function QNA(number) {
-        if (number &gt; qarray.length){
-            document.getElementById('answer').innerHTML = "I can only print up to " + qarray.length + " questions";
+        function QNA(number) {
+            if (number > qarray.length){
+                document.getElementById('answer').innerHTML = "I can only print up to " + qarray.length + " questions";
+            }
+            for (let i = 0; i < number; i++) {
+                const randomValue = qarray[Math.floor(Math.random() * qarray.length)];
+                var index = qarray.indexOf(randomValue);
+                if (index > -1) {
+                    qarray.splice(index, 1);
+                }
+                let guess = prompt(randomValue.question + " Points: " + randomValue.point);
+                count = count + 1;
+                total = total + randomValue.point;
+                if (randomValue.CheckAnswer(guess)) {
+                    score = score + randomValue.point;
+                    correct = correct + 1
+                    document.getElementById('answer').innerHTML = "Well Done!";
+                    document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
+                    document.getElementById('correct').innerHTML = "You got " + correct + " questions correct out of " + count;
+                }
+                else {
+                    document.getElementById('answer').innerHTML = "Nice Try!";
+                    document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
+                    document.getElementById('correct').innerHTML = "Sorry, you have gotten " + correct + " questions correct out of " + count;
+                }
+                }
         }
-        for (let i = 0; i &lt; number; i++) {
-            const randomValue = qarray[Math.floor(Math.random() * qarray.length)];
-            var index = qarray.indexOf(randomValue);
-            if (index &gt; -1) {
-                qarray.splice(index, 1);
-            }
-            let guess = prompt(randomValue.question + " Points: " + randomValue.point);
-            count = count + 1;
-            total = total + randomValue.point;
-            if (randomValue.CheckAnswer(guess)) {
-                score = score + randomValue.point;
-                correct = correct + 1
-                document.getElementById('answer').innerHTML = "Well Done!";
-                document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
-                document.getElementById('correct').innerHTML = "You got " + correct + " questions correct out of " + count;
-            }
-            else {
-                document.getElementById('answer').innerHTML = "Nice Try!";
-                document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
-                document.getElementById('correct').innerHTML = "Sorry, you have gotten " + correct + " questions correct out of " + count;
-            }
-            }
-    }
-    function addQs(question, answer1, points) {
-        let newquestion = new Jeopardy(question, answer1, parseInt(points));
-        qarray.push(newquestion);
-        console.log(qarray);
-    }
-&lt;/script&gt;
-</code></pre></div></div>
+        function addQs(question, answer1, points) {
+            let newquestion = new Jeopardy(question, answer1, parseInt(points));
+            qarray.push(newquestion);
+            console.log(qarray);
+        }
+    </script>
+
 <html>
         <div class="container" style="position: absolute; font-size: 40px;color: red; left: 600px">
             <label for="number">How many questions do you want?</label>

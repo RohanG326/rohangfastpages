@@ -104,6 +104,9 @@ window.onload = wrap_img;
             const qarray = [q1, q2, q3, q4, q5, q6, q7, q8, q9]
 
         function QNA(number) {
+            if (number > qarray.length){
+                document.getElementById('answer').innerHTML = "I can only print up to " + qarray.length + " questions";
+            }
             for (let i = 0; i < number; i++) {
                 const randomValue = qarray[Math.floor(Math.random() * qarray.length)];
                 var index = qarray.indexOf(randomValue);

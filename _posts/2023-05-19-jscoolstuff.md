@@ -93,8 +93,17 @@ image: images/logo.png
             <br>
             <input id="points" type="number"/>
             <button onclick="addQs(document.getElementById('question').value, document.getElementById('answer1').value, document.getElementById('points').value)">Submit</button>
-        
-
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
 
 

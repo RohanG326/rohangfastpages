@@ -7,6 +7,52 @@ image: images/logo.png
 # Yo Yo Yo It's Rohan Gaikwad Yo in another year of AP CS
 
 # Posts
+  <style>
+    .container {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 24px;
+      color: red;
+    }
+
+    .container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .container input[type="number"] {
+      width: 100px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .container input[type="text"] {
+      width: 300px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .container button {
+      padding: 8px 16px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .container button:hover {
+      background-color: darkred;
+    }
+
+    .result {
+      font-size: 24px;
+      color: red;
+      margin-bottom: 20px;
+    }
+  </style>
 <script>
         let score = 0
         let total = 0
@@ -46,8 +92,8 @@ image: images/logo.png
                     qarray.splice(index, 1);
                 }
                 let guess = prompt(randomValue.question + " Points: " + randomValue.point);
-                count = count + 1
-                total = total + randomValue.point
+                count = count + 1;
+                total = total + randomValue.point;
                 if (randomValue.CheckAnswer(guess)) {
                     score = score + randomValue.point;
                     correct = correct + 1
@@ -107,7 +153,6 @@ image: images/logo.png
         <br>
         <br>
         <br>
-
 
 
 
